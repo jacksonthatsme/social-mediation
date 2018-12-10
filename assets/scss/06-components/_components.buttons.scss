@@ -1,0 +1,70 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Buttons
+// ------------------------------------------------------------------
+
+.bttn {
+  @include type-size--R;
+  @include fluid-property(line-height, 16px, 18px);
+  @extend .font-weight--bold;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  @include fluid-property((padding-top, padding-bottom), 15px, 20px);
+  @include fluid-property((padding-left, padding-right), 15px, 35px);
+  @include fluid-property(border-radius, 12px, 14px);
+  position: relative;
+
+  &__icon {
+    @include fluid-property(height, 30px, 36px);
+    @include fluid-property(width, 30px, 36px);
+    @include fluid-property(margin-right, 10px, 15px);
+    flex-shrink: 0;
+  }
+
+  &:before {
+    position: absolute;
+    top: -2px;
+    bottom: -4px;
+    right: -2px;
+    left: -2px;
+    content: "";
+    display: block;
+    @include fluid-property(border-radius, 12px, 14px);
+    border-color: inherit;
+    border-style: solid;
+    border-bottom-width: 4px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    opacity: 0;
+  }
+
+  &:not(.bttn--disabled):hover {
+    transform: translatey(-2px);
+    &:before {
+      opacity: 1;
+    }
+  }
+  &:not(.bttn--disabled):active {
+    transform: translatey(0px);
+    &:before {
+      opacity: 0;
+    }
+  }
+
+
+  &--green {
+    background-color: #48D8A8;
+  }
+  &--red {
+    background-color: #FF7145;
+  }
+  &--yellow {
+    background-color: #FFCE43;
+  }
+  &--disabled {
+    background-color: #EFF2F4;
+    border-color: #C3C8CD;
+    color: #C3C8CD;
+  }
+}

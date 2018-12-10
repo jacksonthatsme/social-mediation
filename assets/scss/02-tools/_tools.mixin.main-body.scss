@@ -1,0 +1,14 @@
+// ------------------------------------------------------------------
+// FUNCTION: Main Body
+// ------------------------------------------------------------------
+
+@mixin main-body {
+  grid-column: 1 / 25;
+
+  @media screen and (min-width: $BP--M) {
+    grid-column: 8 / 25;
+  }
+  @media screen and (min-width: $BP--L) {
+    grid-column: 8 / 25;
+  }
+}

@@ -1,0 +1,52 @@
+// ------------------------------------------------------------------
+// UTILITIES: Type Size
+// ------------------------------------------------------------------
+
+@mixin type-size--XL {
+  @include fluid-property(font-size, 30px, 62px);
+  @include fluid-property(line-height, 38px, 78px);
+  letter-spacing: -.03em;
+}
+
+.type-size--XL {
+  @include type-size--XL;
+}
+
+@mixin type-size--L {
+  @include fluid-property(font-size, 28px, 36px);
+  @include fluid-property(line-height, 38px, 44px);
+  letter-spacing: -.03em;
+}
+
+.type-size--L {
+  @include type-size--XL;
+}
+
+@mixin type-size--M {
+  @include fluid-property(font-size, 18px, 22px);
+  @include fluid-property(line-height, 32px, 32px);
+  letter-spacing: -.01em;
+}
+
+.type-size--M {
+  @include type-size--M;
+}
+
+@mixin type-size--R {
+  @include fluid-property(font-size, 14px, 16px);
+  @include fluid-property(line-height, 20px, 28px);
+  letter-spacing: -.02em;
+}
+
+.type-size--R {
+  @include type-size--R;
+}
+
+@mixin type-size--S {
+  @include fluid-property(font-size, 13px, 14px);
+  @include fluid-property(line-height, 24px, 30px);
+}
+
+.type-size--S {
+  @include type-size--S;
+}

@@ -1,0 +1,10 @@
+// ------------------------------------------------------------------
+// UTILITIES: Grid
+// ------------------------------------------------------------------
+
+.grid-container {
+  width: 100%;
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat($columns, [col-start] 1fr [col-end]);
+}

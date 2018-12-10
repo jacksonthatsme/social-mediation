@@ -1,0 +1,13 @@
+// ------------------------------------------------------------------
+// UTILITIES: Margin
+// ------------------------------------------------------------------
+
+.margin-container {
+  @include fluid-property((margin-left, margin-right), $min-margin, $max-margin);
+  height: inherit;
+  @media(min-width: $max-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $max-width - ($max-margin * 2);
+  }
+}

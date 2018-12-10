@@ -1,0 +1,66 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Feed Section
+// ------------------------------------------------------------------
+
+.feed {
+  @include main-body;
+
+  &__item {
+    &__title {
+      @include type-size--L;
+      @extend .font-weight--bold;
+    }
+
+    &__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      @include type-size--R;
+      @include fluid-property(grid-gap, 40px, 60px);
+      @include fluid-property(padding-top, 20px, 40px);
+
+      @media screen and (min-width: $BP--S) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &__text {
+      @include fluid-property(padding-top, 10px, 20px);
+    }
+
+    &__description {
+      grid-column: 1 / -1;
+      @media screen and (min-width: $BP--S) {
+        grid-column: 1 / 3;
+      }
+    }
+
+    &__subhead {
+      @extend .font-weight--bold;
+    }
+
+    &__people {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      @include fluid-property(padding-top, 10px, 20px);
+      @include fluid-property(row-gap, 10px, 20px);
+
+      @media screen and (min-width: $BP--S) {
+        grid-template-columns: repeat(2, 1fr);
+        @include fluid-property(column-gap, 30px, 40px);
+      }
+    }
+
+    &__person {
+      &__img {
+        @include fluid-property((height, width), 36px, 48px);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+      }
+      &__label {
+        @include fluid-property(line-height, 16px, 18px);
+        @include fluid-property(padding-top, 5px, 10px);
+      }
+    }
+  }
+}

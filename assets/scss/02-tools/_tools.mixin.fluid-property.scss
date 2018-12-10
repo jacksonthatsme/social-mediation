@@ -1,0 +1,23 @@
+// ------------------------------------------------------------------
+// MIXIN: FLuid Property
+// ------------------------------------------------------------------
+
+@mixin fluid-property($properties, $min-value, $max-value, $min-screen: $min-width, $max-screen: $max-width) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-width: $min-screen) {
+			@each $property in $properties {
+				#{$property}: calc-interpolation($min-value, $max-value);
+			}
+		}
+
+		@media screen and (min-width: $max-screen) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}

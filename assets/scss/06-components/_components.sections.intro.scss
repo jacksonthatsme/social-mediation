@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Intro Section
+// ------------------------------------------------------------------
+
+.intro {
+  @include main-body;
+
+  @media screen and (min-width: $BP--M) {
+    @include fluid-property(padding-top, 30px, 50px);
+  }
+  &__logo {
+    @include fluid-property((margin-left, margin-right), -35px, -160px);
+    @media screen and (min-width: $BP--M) {
+      display: none;
+    }
+  }
+}

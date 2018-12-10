@@ -1,0 +1,31 @@
+{
+  "name": "social-mediation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksonthatsme/social-mediation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacksonthatsme/social-mediation/issues"
+  },
+  "homepage": "https://github.com/jacksonthatsme/social-mediation#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-path": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-ruby-haml": "0.0.9"
+  }
+}

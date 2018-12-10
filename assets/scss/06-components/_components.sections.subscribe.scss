@@ -1,0 +1,24 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Subscribe Section
+// ------------------------------------------------------------------
+
+.subscribe {
+  @include main-body;
+
+  &__button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include fluid-property(grid-gap, 10px, 20px);
+
+
+    @media screen and (min-width: $BP--S) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: $BP--M) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: $BP--L) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
