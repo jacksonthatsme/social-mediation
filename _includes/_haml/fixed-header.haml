@@ -1,0 +1,37 @@
+.fixed-menu
+  .margin-container
+    .grid-container.fixed-menu__grid
+      .fixed-menu__logo
+        %svg{viewBox: "0 0 300 280"}
+          %use{:"xlink:href" => "#logo"}
+      .fixed-menu__toggle{data:{js: "menu__toggle"}}
+        %svg.fixed-menu__background.fixed-menu__icon{preserveAspectRatio: "none", viewBox: "0 0 32 32", data:{js: "menu__background"}}
+          %use{:"xlink:href" => "#blob--01"}
+        %svg.fixed-menu__activate.fixed-menu__icon{viewBox: "0 0 32 32", data:{js: "menu__activate"}}
+          %use{:"xlink:href" => "#icon--menu"}
+        %svg.fixed-menu__close.fixed-menu__icon{viewBox: "0 0 32 32", data:{js: "menu__close"}}
+          %use{:"xlink:href" => "#icon--X"}
+      .fixed-menu__nav{data: {js: "navigation__list"}}
+        %ul.fixed-menu__nav__list
+          %li.fixed-menu__nav__item.mobile__menu__element{data: {js: "navigation__list__item site__menu__element"}}
+            %a(href="")
+              Episodes
+          %li.fixed-menu__nav__item.mobile__menu__element{data: {js: "navigation__list__item site__menu__element"}}
+            %a(href="")
+              Contributors
+          %li.fixed-menu__nav__item.mobile__menu__element{data: {js: "navigation__list__item site__menu__element"}}
+            %a(href="")
+              Press
+          %li.fixed-menu__nav__item.mobile__menu__element{data: {js: "navigation__list__item site__menu__element"}}
+            %a(href="")
+              Contact
+      .fixed-menu__footer
+        .social__button-container.mobile__menu__element{data: {js: "social__button-container site__menu__element"}}
+          %a.social__button(href="")
+            %svg.social__button__icon
+              %use{:"xlink:href" => "#icon--twiter"}
+          %a.social__button(href="")
+            %svg.social__button__icon
+              %use{:"xlink:href" => "#icon--instagram"}
+        .footer__copyright.mobile__menu__element{data: {js: "footer__copyright site__menu__element"}}
+          The Fancy Dept. ©2018 
