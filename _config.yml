@@ -20,10 +20,9 @@ defaults:
     type: contributors
   values:
     is host: false
-    links: [
-      id:
-      url:
-      ]
+    links:
+      - id:
+        url:
 - scope:
     path: ''
     type: posts
