@@ -15,7 +15,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./assets/css/'));
 });
 
-gulp.task('js:vendor', function(){
+gulp.task('js:vendor', function() {
   return gulp.src(['./assets/javascripts/vendor/*.js'])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('./assets/js/'));
