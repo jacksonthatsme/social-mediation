@@ -1,6 +1,7 @@
 ---
 title: Jackson Lynch
 date: 2018-12-11 05:06:00 Z
+image: "/uploads/Headshot--20180909.jpg"
 is host: true
 links:
 - id: Twitter
