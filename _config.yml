@@ -5,6 +5,9 @@ collections:
   posts:
     title: Posts
     output: true
+  subscribe-links:
+    title: Subscribe Links
+    output: true
   uploads:
     title: Uploads
     output: true
