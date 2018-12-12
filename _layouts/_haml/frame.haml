@@ -11,8 +11,8 @@
 
 
   %body
-    {% haml svg-defs.haml %}
-    {% haml fixed-header.haml %}
+    {% include svg-defs.html %}
+    {% include fixed-header.html %}
     {{content}}
 
     %script{type: "text/javascript", src: "/assets/js/vendor.js"}

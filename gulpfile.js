@@ -26,15 +26,15 @@ gulp.task('js:custom', function() {
     .pipe(gulp.dest('./assets/js/'));
 });
 
-// gulp.task('haml', function() {
-//   return gulp.src('**/_haml/*.haml')
-//     .pipe(haml({'style': 'indented'}))
-//     .pipe(rename(function (path) {
-//        var temp = path.dirname.replace('/_haml','');
-//        path.dirname = temp;
-//     }))
-//     .pipe(gulp.dest('.'));
-// });
+gulp.task('haml', function() {
+  return gulp.src('**/_haml/*.haml')
+    .pipe(haml())
+    .pipe(rename(function (path) {
+       var temp = path.dirname.replace('/_haml','');
+       path.dirname = temp;
+    }))
+    .pipe(gulp.dest('.'));
+});
 
 gulp.task('js', ['js:vendor', 'js:custom']);
 
