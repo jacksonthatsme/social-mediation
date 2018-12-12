@@ -5,8 +5,6 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const haml = require('gulp-ruby-haml');
 const rename = require('gulp-rename');
-const path = require('gulp-path');
-const flatten = require('gulp-flatten');
 
 // Register Tasks
 gulp.task('sass', function() {
@@ -28,19 +26,19 @@ gulp.task('js:custom', function() {
     .pipe(gulp.dest('./assets/js/'));
 });
 
-gulp.task('haml', function() {
-  return gulp.src('**/_haml/*.haml')
-    .pipe(haml().on('error', function(e) { console.log(e.message); }))
-    .pipe(rename(function (path) {
-       var temp = path.dirname.replace('/_haml','');
-       path.dirname = temp;
-    }))
-    .pipe(gulp.dest('.'));
-});
+// gulp.task('haml', function() {
+//   return gulp.src('**/_haml/*.haml')
+//     .pipe(haml({'style': 'indented'}))
+//     .pipe(rename(function (path) {
+//        var temp = path.dirname.replace('/_haml','');
+//        path.dirname = temp;
+//     }))
+//     .pipe(gulp.dest('.'));
+// });
 
 gulp.task('js', ['js:vendor', 'js:custom']);
 
-gulp.task('build', ['sass','js', 'haml']);
+gulp.task('build', ['sass','js']);
 
 gulp.task('default', ['build']);
 

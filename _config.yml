@@ -24,7 +24,6 @@ defaults:
     links:
     - id:
       url:
-
 - scope:
     path: ''
     type: posts

@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %meta{content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible'}
+    %meta{charset: 'utf-8'}
+    %meta{content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: 'viewport'}
+    %link{rel: "stylesheet", type: "text/css", href: "/assets/css/main.css"}
+
+    %title
+      {{site.title}}
+
+
+  %body
+    {% haml svg-defs.haml %}
+    {% haml fixed-header.haml %}
+    {{content}}
+
+    %script{type: "text/javascript", src: "/assets/js/vendor.js"}
+    %script{type: "text/javascript", src: "/assets/js/site.js"}

@@ -1,0 +1,12 @@
+.feed__item
+  .feed__item__title
+    == {{include.title}}
+  .feed__item__body
+    .feed__item__description
+      .feed__item__subhead
+        == {{include.publish-date}}
+      .feed__item__text
+        = "{{include.description}}"
+    .feed__item__contributors
+      .feed__item__subhead
+        Contributors
