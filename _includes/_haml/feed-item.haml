@@ -10,10 +10,3 @@
     .feed__item__contributors
       .feed__item__subhead
         Contributors
-      .feed__item__people
-      {% for person in include.people %}
-      .feed__item__person
-      .feed__item__person__img{style: "background-image: url('{{person.image}}')"}
-      .feed__item__person__label
-      {{person.title}}
-      {% endfor %}
