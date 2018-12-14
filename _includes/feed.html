@@ -3,9 +3,6 @@
         Latest Episodes
     </div>
     {% for post in site.posts %}
-      {{post.contributors}}
-      {% for people in post.contributors %}
-        Hello
-      {% endfor %}
+      {% include feed-item.html title=post.title publish-date=post.date description=post.content people=post.contributors %}
     {% endfor %}
 </section>
