@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const haml = require('gulp-ruby-haml');
 const rename = require('gulp-rename');
+const htmlbeautify = require('gulp-html-beautify');
 
 // Register Tasks
 gulp.task('sass', function() {
@@ -29,6 +30,7 @@ gulp.task('js:custom', function() {
 gulp.task('haml', function() {
   return gulp.src('**/_haml/*.haml')
     .pipe(haml())
+    .pipe(htmlbeautify({indent_size: 2}))
     .pipe(rename(function (path) {
        var temp = path.dirname.replace('/_haml','');
        path.dirname = temp;

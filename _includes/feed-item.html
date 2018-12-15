@@ -1,20 +1,31 @@
 <div class='feed__item'>
-<div class='feed__item__title'>
-{{include.title}}
-</div>
-<div class='feed__item__body'>
-<div class='feed__item__description'>
-<div class='feed__item__subhead'>
-{{include.publish-date}}
-</div>
-<div class='feed__item__text'>
-{{include.description}}
-</div>
-</div>
-<div class='feed__item__contributors'>
-<div class='feed__item__subhead'>
-Contributors
-</div>
-</div>
-</div>
+  <div class='feed__item__title'>
+    {{include.title}}
+  </div>
+  <div class='feed__item__body'>
+    <div class='feed__item__description'>
+      <div class='feed__item__subhead'>
+        {{include.publish-date}}
+      </div>
+      <div class='feed__item__text'>
+        {{include.description}}
+      </div>
+    </div>
+    <div class='feed__item__contributors'>
+      <div class='feed__item__subhead'>
+        Contributors
+      </div>
+      <div class='feed__item__people'>
+        {% for person in include.people %}
+          {% assign this-contributor = site.contributors | where: 'title', person | first %}
+          <div class='feed__item__person'>
+            <div class='feed__item__person__img' style="background-image: url('{{this-contributor.image}}')"></div>
+            <div class='feed__item__person__label'>
+              {{this-contributor.title}}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>

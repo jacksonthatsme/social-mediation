@@ -1,3 +1,6 @@
 %section.feed{data: {section: "feed"}}
   .section__label.type-size--M
     Latest Episodes
+  {% for post in site.posts %}
+  {% include feed-item.html title=post.title publish-date=post.date description=post.content people=post.contributors %}
+  {% endfor %}

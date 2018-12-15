@@ -22,11 +22,10 @@
     "gulp-path": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "gulp-ziey-ruby-haml": "0.0.5"
-  },
-  "dependencies": {
-    "gulp-flatten": "^0.4.0",
     "gulp-rename": "^1.4.0",
     "gulp-ruby-haml": "0.0.9"
+  },
+  "dependencies": {
+    "gulp-html-beautify": "^1.0.1"
   }
 }
