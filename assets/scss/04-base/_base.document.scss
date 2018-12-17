@@ -10,3 +10,7 @@ html, body {
   box-sizing: inherit;
   font-family: $font-stack--sans;
 }
+
+body {
+  overflow-x: hidden;
+}

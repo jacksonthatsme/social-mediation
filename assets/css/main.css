@@ -62,6 +62,9 @@ html, body {
   box-sizing: inherit;
   font-family: "Faro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+body {
+  overflow-x: hidden; }
+
 img {
   width: 100%; }
 
@@ -908,10 +911,6 @@ a {
     @media screen and (min-width: 1020px) {
       .subscribe__button-container {
         grid-template-columns: repeat(3, 1fr); } }
-
-main.body {
-  width: 100vw;
-  overflow-x: hidden; }
 
 .section__label {
   padding-bottom: 10px; }
