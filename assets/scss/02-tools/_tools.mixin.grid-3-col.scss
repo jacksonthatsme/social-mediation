@@ -1,0 +1,12 @@
+// ------------------------------------------------------------------
+// FUNCTION: 3 COl Grid
+// ------------------------------------------------------------------
+
+@mixin grid-3-col {
+  grid-template-columns: 1fr;
+  @include fluid-property(grid-gap, 40px, 60px);
+
+  @media screen and (min-width: $BP--S) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

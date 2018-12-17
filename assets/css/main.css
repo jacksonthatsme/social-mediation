@@ -75,7 +75,7 @@ a {
 .font-weight--regular {
   font-weight: 300; }
 
-.font-weight--bold, .bttn, .fixed-menu__nav__list, .feed__item__title, .feed__item__subhead {
+.font-weight--bold, .bttn, .fixed-menu__nav__list, .feed__item__title, .feed__item__subhead, .person__name {
   font-weight: 700; }
 
 .grid-container {
@@ -912,6 +912,53 @@ a {
       .subscribe__button-container {
         grid-template-columns: repeat(3, 1fr); } }
 
+.host-block {
+  grid-column: 1 / 25;
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media screen and (min-width: 760px) {
+    .host-block {
+      grid-column: 8 / 25; } }
+  @media screen and (min-width: 1020px) {
+    .host-block {
+      grid-column: 8 / 25; } }
+  .host-block {
+    padding-top: 30px; }
+    @media screen and (min-width: 320px) {
+      .host-block {
+        padding-top: calc(1.85185vw + 24.07407px); } }
+    @media screen and (min-width: 1400px) {
+      .host-block {
+        padding-top: 50px; } }
+  .host-block {
+    grid-gap: 40px; }
+    @media screen and (min-width: 320px) {
+      .host-block {
+        grid-gap: calc(1.85185vw + 34.07407px); } }
+    @media screen and (min-width: 1400px) {
+      .host-block {
+        grid-gap: 60px; } }
+  @media screen and (min-width: 480px) {
+    .host-block {
+      grid-template-columns: repeat(3, 1fr); } }
+
+.page__title {
+  grid-column: 1 / 25; }
+  @media screen and (min-width: 760px) {
+    .page__title {
+      grid-column: 8 / 25; } }
+  @media screen and (min-width: 1020px) {
+    .page__title {
+      grid-column: 8 / 25; } }
+  .page__title {
+    padding-top: 30px; }
+    @media screen and (min-width: 320px) {
+      .page__title {
+        padding-top: calc(1.85185vw + 24.07407px); } }
+    @media screen and (min-width: 1400px) {
+      .page__title {
+        padding-top: 50px; } }
+
 .section__label {
   padding-bottom: 10px; }
   @media screen and (min-width: 320px) {
@@ -929,3 +976,88 @@ a {
   @media screen and (min-width: 1400px) {
     .section__label {
       padding-top: 50px; } }
+
+.person__image {
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0; }
+
+.person__name {
+  letter-spacing: -.03em; }
+  .person__name {
+    font-size: 28px; }
+    @media screen and (min-width: 320px) {
+      .person__name {
+        font-size: calc(0.74074vw + 25.62963px); } }
+    @media screen and (min-width: 1400px) {
+      .person__name {
+        font-size: 36px; } }
+  .person__name {
+    line-height: 38px; }
+    @media screen and (min-width: 320px) {
+      .person__name {
+        line-height: calc(0.55556vw + 36.22222px); } }
+    @media screen and (min-width: 1400px) {
+      .person__name {
+        line-height: 44px; } }
+
+.person__label {
+  letter-spacing: -.01em; }
+  .person__label {
+    font-size: 18px; }
+    @media screen and (min-width: 320px) {
+      .person__label {
+        font-size: calc(0.37037vw + 16.81481px); } }
+    @media screen and (min-width: 1400px) {
+      .person__label {
+        font-size: 22px; } }
+  .person__label {
+    line-height: 32px; }
+    @media screen and (min-width: 320px) {
+      .person__label {
+        line-height: calc(0vw + 32px); } }
+    @media screen and (min-width: 1400px) {
+      .person__label {
+        line-height: 32px; } }
+  .person__label {
+    padding-bottom: 10px; }
+    @media screen and (min-width: 320px) {
+      .person__label {
+        padding-bottom: calc(0.92593vw + 7.03704px); } }
+    @media screen and (min-width: 1400px) {
+      .person__label {
+        padding-bottom: 20px; } }
+
+.person__bio {
+  letter-spacing: -.02em; }
+  .person__bio {
+    font-size: 14px; }
+    @media screen and (min-width: 320px) {
+      .person__bio {
+        font-size: calc(0.18519vw + 13.40741px); } }
+    @media screen and (min-width: 1400px) {
+      .person__bio {
+        font-size: 16px; } }
+  .person__bio {
+    line-height: 20px; }
+    @media screen and (min-width: 320px) {
+      .person__bio {
+        line-height: calc(0.74074vw + 17.62963px); } }
+    @media screen and (min-width: 1400px) {
+      .person__bio {
+        line-height: 28px; } }
+
+@media screen and (min-width: 480px) {
+  .person__info {
+    grid-column: span 2; } }
+
+.person--host .person__image {
+  grid-column: 3 / 4;
+  grid-row: 1; }
+
+.person--host .person__info {
+  grid-column: 1 / 3;
+  grid-row: 1; }

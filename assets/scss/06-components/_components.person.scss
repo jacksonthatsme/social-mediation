@@ -1,0 +1,47 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Person
+// ------------------------------------------------------------------
+
+.person {
+
+  &__image {
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  &__name {
+    @include type-size--L;
+    @extend .font-weight--bold;
+  }
+
+  &__label {
+    @include type-size--M;
+    @include fluid-property(padding-bottom, 10px, 20px);
+  }
+
+  &__bio {
+    @include type-size--R;
+  }
+
+  &__info {
+    @media screen and (min-width: $BP--S) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.person--host {
+  .person__image {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  .person__info {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+}

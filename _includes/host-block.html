@@ -1,0 +1,13 @@
+{% assign host = site.contributors | where: "is host", true | first %}
+
+<section class='host-block person person--host'>
+  <div class="person__image" style="background-image:URL('{{ host.image }}')"></div>
+  <div class="person__info">
+    <div class="person__label">
+      Your host
+    </div>
+    <div class="person__name">{{ host.title }}</div>
+    <div class="person__bio">{{ host.content }}</div>
+    <div class="person__social__wrapper"></div>
+  </div>
+</section>

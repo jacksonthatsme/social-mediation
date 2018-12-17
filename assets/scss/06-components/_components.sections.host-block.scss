@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Host Block
+// ------------------------------------------------------------------
+
+
+.host-block {
+  @include main-body;
+  @include fluid-property(padding-top, 30px, 50px);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  @include fluid-property(grid-gap, 40px, 60px);
+
+  @media screen and (min-width: $BP--S) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
