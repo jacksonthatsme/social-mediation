@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Panelists Section
+// ------------------------------------------------------------------
+
+.panelists {
+  @include main-body;
+
+  &__grid {
+
+    @media screen and (min-width: $BP--M) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      @include fluid-property(grid-gap, 30px, 50px);
+    }
+  }
+}

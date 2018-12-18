@@ -6,7 +6,9 @@ layout: frame
   <div class='margin-container'>
     <div class='grid-container'>
       {% include page-title.html title=page.title %}
-      {% include host-block.html%}
+      {% assign host = site.contributors | where: "is host", true | first %}
+      {% include person-block--large.html image=host.image title=host.title content=host.content %}
+      {% include panelists.html %}
     </div>
   </div>
 </main>

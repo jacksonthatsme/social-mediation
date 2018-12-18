@@ -1,0 +1,10 @@
+<section class='panelists'>
+  <div class='section__label type-size--M'>
+    Panelists
+  </div>
+  <div class="panelists__grid">
+    {% for person in site.contributors %}
+      {% include person-block.html image=person.image title=person.title content=person.content %}
+    {% endfor %}
+  </div>
+</section>
