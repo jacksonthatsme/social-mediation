@@ -1,6 +1,7 @@
 ---
 title: Ronin Wood
 date: 2018-12-11 05:14:00 Z
+image: "/uploads/Ronin.jpg"
 links:
 - id: Twitter
   url: https://twitter.com/RoninWood
