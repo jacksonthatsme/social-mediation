@@ -3,6 +3,14 @@
   <div class="person-block__info">
     <div class="person-block__name">{{ include.title }}</div>
     <div class="person-block__bio">{{ include.content }}</div>
-    <div class="person-block__social__wrapper"></div>
+    <div class="person-block__social__wrapper">
+      {% for link in include.links %}
+        <a href="{{ link.url }}">
+          <svg class='social__button__icon'>
+            <use xlink:href="#icon--{{ link.id | downcase }}"></use>
+          </svg>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 </section>
