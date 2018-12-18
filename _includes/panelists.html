@@ -3,8 +3,12 @@
     Panelists
   </div>
   <div class="panelists__grid">
+    {% assign host = site.contributors | where: "is host", true | first %}
     {% for person in site.contributors %}
-      {% include person-block.html image=person.image title=person.title content=person.content %}
+      {% if person == host %}
+      {% else %}
+        {% include person-block.html image=person.image title=person.title content=person.content %}
+      {% endif %}
     {% endfor %}
   </div>
 </section>
