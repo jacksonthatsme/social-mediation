@@ -1,14 +1,13 @@
 // ------------------------------------------------------------------
-// FUNCTION: Main Body
+// COMPONENTS: Content Wrapper
 // ------------------------------------------------------------------
 
-@mixin main-body {
+.content-wrapper {
   grid-column: 1 / 25;
+  @include fluid-property(padding-bottom, 80px, 160px);
 
   @media screen and (min-width: $BP--M) {
     grid-column: 8 / 25;
-  }
-  @media screen and (min-width: $BP--L) {
-    grid-column: 8 / 25;
+    @include fluid-property(padding-top, 30px, 50px);
   }
 }

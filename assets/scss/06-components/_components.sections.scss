@@ -2,11 +2,6 @@
 // COMPONENTS: Sections
 // ------------------------------------------------------------------
 
-main.body {
-  // width: 100%;
-  // overflow-x: hidden;
-}
-
 .section {
   &__label {
     @include fluid-property(padding-bottom, 10px, 20px);

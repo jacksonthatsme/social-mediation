@@ -116,9 +116,11 @@
 .social__button {
   &-container {
     @include fluid-property(padding-bottom, 10px, 20px);
+    display: flex;
   }
   &__icon {
     @include fluid-property((height, width), 40px, 50px);
+    @include fluid-property(margin-right, 5px, 10px);
     @media screen and (min-width: $BP--M) {
       @include fluid-property((height, width), 32px, 32px);
     }

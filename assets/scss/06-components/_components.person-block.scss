@@ -1,0 +1,68 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Person
+// ------------------------------------------------------------------
+
+.person-block {
+
+  &__image {
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  &__name {
+    @include type-size--L;
+    @extend .font-weight--bold;
+    @include fluid-property(padding-top, 10px, 20px);
+  }
+
+  &__label {
+    @include type-size--M;
+  }
+
+  &__bio {
+    @include fluid-property(padding-top, 5px, 10px);
+    @include type-size--R;
+  }
+
+  &__info {
+    @media screen and (min-width: $BP--S) {
+      grid-column: span 2;
+    }
+  }
+
+  &__social__wrapper {
+    display: flex;
+    @include fluid-property(padding-top, 5px, 10px);
+  }
+
+  &__social__icon {
+    @include fluid-property((height, width), 32px, 32px);
+    @include fluid-property(margin-right, 5px, 10px);
+  }
+}
+
+.person-block--large {
+  @include fluid-property(padding-top, 30px, 50px);
+
+
+  @media screen and (min-width: $BP--M) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    @include fluid-property(grid-gap, 30px, 50px);
+  }
+
+  .person-block__image {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  .person-block__info {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+}

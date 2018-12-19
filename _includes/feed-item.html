@@ -5,7 +5,8 @@
   <div class='feed__item__body'>
     <div class='feed__item__description'>
       <div class='feed__item__subhead'>
-        {{include.publish-date}}
+        Published
+        {{include.publish-date | date: "%b %-d, %Y" }}
       </div>
       <div class='feed__item__text'>
         {{include.description}}

@@ -3,8 +3,6 @@
 // ------------------------------------------------------------------
 
 .feed {
-  @include main-body;
-
   &__item {
     &__title {
       @include type-size--L;

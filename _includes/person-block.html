@@ -5,8 +5,8 @@
     <div class="person-block__bio">{{ include.content }}</div>
     <div class="person-block__social__wrapper">
       {% for link in include.links %}
-        <a href="{{ link.url }}">
-          <svg class='social__button__icon'>
+        <a href="{{ link.url }}" class="person-block__social__icon">
+          <svg class=''>
             <use xlink:href="#icon--{{ link.id | downcase }}"></use>
           </svg>
         </a>

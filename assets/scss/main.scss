@@ -12,7 +12,6 @@
 //
 //===============================
 
-@import "02-tools/tools.mixin.main-body";
 @import "02-tools/tools.function.calc-interpolation";
 @import "02-tools/tools.mixin.fluid-property";
 
@@ -33,6 +32,7 @@
 @import "04-base/base.document";
 @import "04-base/base.image";
 @import "04-base/base.links";
+@import "04-base/base.svg";
 
 
 // .05 Utilities
@@ -58,11 +58,12 @@
 @import "06-components/components.sections.intro";
 @import "06-components/components.sections.pagination";
 @import "06-components/components.sections.subscribe";
-@import "06-components/components.person.large";
 @import "06-components/components.sections.page-title";
 @import "06-components/components.sections.panelists";
 @import "06-components/components.sections";
-@import "06-components/components.person";
+@import "06-components/components.person-block";
+@import "06-components/components.content-wrapper";
+@import "06-components/components.footer";
 
 
 // .07 Scratchpads
