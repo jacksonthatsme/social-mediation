@@ -1,0 +1,6 @@
+.content-container {
+  background-color: white;
+  @include fluid-property(margin-bottom, 291px, 274px);
+  position: relative;
+  z-index: 9;
+}

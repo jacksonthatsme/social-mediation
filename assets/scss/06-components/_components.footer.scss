@@ -1,3 +1,63 @@
 // ------------------------------------------------------------------
 // COMPONENTS: Footer
 // ------------------------------------------------------------------
+
+.footer {
+  @include fluid-property((padding-bottom, padding-top), 30px, 50px);
+  background-color: #FFCE43;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  z-index: 8;
+
+  &__header {
+    grid-column: 1 / 25;
+    @include type-size--L;
+    @extend .font-weight--bold;
+
+    @media screen and (min-width: $BP--M) {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__newsletter {
+    grid-column: 1 / 25;
+    @include type-size--M;
+
+    @media screen and (min-width: $BP--M) {
+      grid-column: 8 / 25;
+    }
+
+    &__form {
+      @include fluid-property(padding-top, 30px, 50px);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &__input {
+      @include fluid-property(padding, 20px, 30px);
+      grid-row: 1;
+      grid-column: 1 / 3;
+      @include type-size--M;
+      font-family: $font-stack--sans;
+      @include fluid-property(border-radius, 12px, 14px);
+      border: none;
+
+      &:focus {
+        outline: none;
+        //border: 2px solid black;
+      }
+    }
+
+    &__submit {
+      grid-row: 1;
+      grid-column: 2 / 3;
+      @extend .bttn;
+      margin: 10px;
+      background-color: black;
+      cursor: pointer;
+      color: white;
+      @include fluid-property(border-radius,6px, 8px);
+    }
+  }
+}
