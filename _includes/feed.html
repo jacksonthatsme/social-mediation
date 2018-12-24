@@ -1,7 +1,4 @@
 <section class='feed' data-section='feed'>
-  <div class='section__label'>
-    Latest Episodes
-  </div>
   {% for post in site.posts %}
     {% include feed-item.html title=post.title publish-date=post.date description=post.content people=post.contributors %}
   {% endfor %}

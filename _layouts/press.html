@@ -11,7 +11,7 @@ layout: frame
   What people are saying about us
 </div>
 <section class="mentions">
-  {% for mention in page.mentions %}
-    {% include mention-block.html headline=mention.headline  %}
+  {% for mention in page.Mentions %}
+    {% include mention-block.html headline=mention.Headline author=mention.Author logo=mention.Logo url=mention.URL %}
   {% endfor %}
 </section>

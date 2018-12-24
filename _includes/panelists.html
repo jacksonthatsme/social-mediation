@@ -1,14 +1,9 @@
 <section class='panelists'>
-  <div class='section__label'>
-    Panelists
-  </div>
-  <div class="panelists__grid">
-    {% assign host = site.contributors | where: "is host", true | first %}
-    {% for person in site.contributors %}
-      {% if person == host %}
-      {% else %}
-        {% include person-block.html image=person.image title=person.title content=person.content links=person.links %}
-      {% endif %}
-    {% endfor %}
-  </div>
+  {% assign host = site.contributors | where: "is host", true | first %}
+  {% for person in site.contributors %}
+    {% if person == host %}
+    {% else %}
+      {% include person-block.html image=person.image title=person.title content=person.content links=person.links %}
+    {% endif %}
+  {% endfor %}
 </section>

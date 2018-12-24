@@ -3,23 +3,11 @@
 // ------------------------------------------------------------------
 
 .bttn {
-  @include type-size--R;
-  @include fluid-property(line-height, 16px, 18px);
-  @extend .font-weight--bold;
   border: 2px solid black;
-  display: flex;
-  align-items: center;
   @include fluid-property((padding-top, padding-bottom), 15px, 20px);
   @include fluid-property((padding-left, padding-right), 15px, 35px);
   @include fluid-property(border-radius, 12px, 14px);
   position: relative;
-
-  &__icon {
-    @include fluid-property(height, 30px, 36px);
-    @include fluid-property(width, 30px, 36px);
-    @include fluid-property(margin-right, 10px, 15px);
-    flex-shrink: 0;
-  }
 
   &:before {
     position: absolute;
@@ -38,7 +26,6 @@
     border-left-width: 0px;
     opacity: 0;
   }
-
   &:not(.bttn--disabled):hover {
     transform: translatey(-2px);
     &:before {
@@ -51,7 +38,6 @@
       opacity: 0;
     }
   }
-
 
   &--green {
     background-color: #48D8A8;
@@ -66,5 +52,21 @@
     background-color: #EFF2F4;
     border-color: #C3C8CD;
     color: #C3C8CD;
+    cursor: not-allowed;
+  }
+}
+
+.bttn--subscribe {
+  @include type-size--R;
+  @include fluid-property(line-height, 16px, 18px);
+  @extend .font-weight--bold;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    @include fluid-property(height, 30px, 36px);
+    @include fluid-property(width, 30px, 36px);
+    @include fluid-property(margin-right, 10px, 15px);
+    flex-shrink: 0;
   }
 }

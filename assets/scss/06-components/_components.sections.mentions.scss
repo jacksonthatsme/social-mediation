@@ -1,0 +1,4 @@
+.mentions {
+  @include three-up-grid;
+  @include fluid-property(grid-gap, 10px, 20px);
+}

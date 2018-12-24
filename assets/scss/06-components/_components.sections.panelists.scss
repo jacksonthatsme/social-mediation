@@ -3,17 +3,5 @@
 // ------------------------------------------------------------------
 
 .panelists {
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    @include fluid-property(grid-gap, 30px, 50px);
-
-    @media screen and (min-width: $BP--S) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (min-width: $BP--L) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+  @include three-up-grid;
 }
