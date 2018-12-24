@@ -1,0 +1,17 @@
+---
+layout: frame
+---
+
+{% include page-title.html title=page.content %}
+<div class='section__label'>
+  Downloads
+</div>
+
+<div class='section__label'>
+  What people are saying about us
+</div>
+<section class="mentions">
+  {% for mention in page.mentions %}
+    {% include mention-block.html headline=mention.headline  %}
+  {% endfor %}
+</section>
