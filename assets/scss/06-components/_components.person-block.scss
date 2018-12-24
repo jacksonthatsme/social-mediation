@@ -20,18 +20,12 @@
   }
 
   &__label {
-    @include type-size--M;
+    @include type-size--L;
   }
 
   &__bio {
     @include fluid-property(padding-top, 5px, 10px);
     @include type-size--R;
-  }
-
-  &__info {
-    @media screen and (min-width: $BP--S) {
-      grid-column: span 2;
-    }
   }
 
   &__social__wrapper {
@@ -47,22 +41,38 @@
 
 .person-block--large {
   @include fluid-property(padding-top, 30px, 50px);
+  display: grid;
+  grid-template-columns: 1fr;
+  @include fluid-property(grid-gap, 10px, 50px);
 
+  .person-block__name {
+    padding-top: 0px;
+  }
 
-  @media screen and (min-width: $BP--M) {
-    display: grid;
-    grid-template-columns: 1fr;
+  @media screen and (min-width: $BP--S) {
+    grid-template-columns: repeat(2, 1fr);
+    .person-block__image {
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
+
+    .person-block__info {
+      grid-column: 1 / 2;
+      grid-row: 1;
+    }
+  }
+
+  @media screen and (min-width: $BP--L) {
     grid-template-columns: repeat(3, 1fr);
-    @include fluid-property(grid-gap, 30px, 50px);
-  }
 
-  .person-block__image {
-    grid-column: 3 / 4;
-    grid-row: 1;
-  }
+    .person-block__image {
+      grid-column: 3 / 4;
+      grid-row: 1;
+    }
 
-  .person-block__info {
-    grid-column: 1 / 3;
-    grid-row: 1;
+    .person-block__info {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
   }
 }

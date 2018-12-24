@@ -28,7 +28,9 @@ $(document).ready(function() {
       yellowEyeL = $('[data-js="yellow__eye--L"]'),
       yellowEyeR = $('[data-js="yellow__eye--R"]'),
       yellowHand = $('[data-js="yellow__hand"]'),
-      logotype = $('[data-js="logotype"]');
+      logotype = $('[data-js="logotype"]'),
+      contentContainer = $('[data-js="content-container"]'),
+      footer = $('[data-js="footer"]');
 
   var menuAnimation = new TimelineMax();
 
@@ -53,7 +55,24 @@ $(document).ready(function() {
     }
   }
 
-  menuToggle.bind( "click", function() {
+  menuToggle.bind('click', function() {
     toggleMenu();
   });
+
+  function setFooterHeight() {
+    var footerHeight = footer.innerHeight();
+    contentContainer.css('marginBottom', footerHeight);
+  }
+
+  setFooterHeight();
+
+  $(window).resize(function(){
+    setFooterHeight();
+  });
+
+  var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1});
+
+  blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
+                   .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
+                   .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
 });

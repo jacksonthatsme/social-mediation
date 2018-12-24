@@ -2,12 +2,26 @@
 // COMPONENTS: Content Wrapper
 // ------------------------------------------------------------------
 
+.content-container {
+  background-color: white;
+  @include fluid-property(margin-bottom, 452px, 274px);
+  position: relative;
+  z-index: 9;
+}
+
 .content-wrapper {
   grid-column: 1 / 25;
-  @include fluid-property(padding-bottom, 80px, 160px);
+  @include fluid-property(padding-bottom, 60px, 80px);
 
   @media screen and (min-width: $BP--M) {
     grid-column: 8 / 25;
     @include fluid-property(padding-top, 30px, 50px);
+  }
+}
+
+.content__logo {
+  @include fluid-property((margin-left, margin-right), -35px, -180px);
+  @media screen and (min-width: $BP--M) {
+    display: none;
   }
 }

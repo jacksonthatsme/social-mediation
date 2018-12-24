@@ -14,15 +14,11 @@
 <body>
   {% include svg-defs.html %}
   {% include footer.html %}
-  <div class="content-container">
+  <div class="content-container" data-js="content-container">
     <div class='margin-container'>
       <div class='grid-container'>
         <main class="content-wrapper">
-          <div class='intro__logo'>
-            <svg viewBox='0 0 300 280'>
-              <use xlink:href='#logo'></use>
-            </svg>
-          </div>
+          {% include logo.html %}
           {{content}}
         </main>
       </div>

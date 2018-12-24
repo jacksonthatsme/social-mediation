@@ -3,5 +3,6 @@
 // ------------------------------------------------------------------
 
 .page__title {
-  @include fluid-property(padding-top, 30px, 50px);
+  @include type-size--XL;
+  @extend .font-weight--bold;
 }

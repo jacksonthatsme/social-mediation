@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------
 
 .footer {
-  @include fluid-property((padding-bottom, padding-top), 30px, 50px);
+  @include fluid-property((padding-bottom, padding-top), 40px, 60px);
   background-color: #FFCE43;
   position: fixed;
   width: 100vw;
@@ -13,7 +13,7 @@
   &__header {
     grid-column: 1 / 25;
     @include type-size--L;
-    @extend .font-weight--bold;
+    @include fluid-property(padding-bottom, 10px, 20px);
 
     @media screen and (min-width: $BP--M) {
       grid-column: 1 / 7;
@@ -26,10 +26,11 @@
 
     @media screen and (min-width: $BP--M) {
       grid-column: 8 / 25;
+      padding-top: 0px;
     }
 
     &__form {
-      @include fluid-property(padding-top, 30px, 50px);
+      @include fluid-property(padding-top, 10px, 20px);
       display: grid;
       grid-template-columns: 1fr;
     }
@@ -45,7 +46,6 @@
 
       &:focus {
         outline: none;
-        //border: 2px solid black;
       }
     }
 
@@ -57,7 +57,34 @@
       background-color: black;
       cursor: pointer;
       color: white;
-      @include fluid-property(border-radius,6px, 8px);
+      @include fluid-property(border-radius, 6px, 8px);
+    }
+  }
+
+  &__social {
+    grid-column: 1 / 25;
+    @include fluid-property(padding-top, 40px, 60px);
+
+    @media screen and (min-width: $BP--M) {
+      display: none;
+    }
+
+    &__icon {
+      @include fluid-property((height, width), 50px, 50px);
+      @include fluid-property(margin-right, 5px, 10px);
+    }
+
+    &__container {
+      display: flex;
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / 25;
+    @include type-size--S;
+
+    @media screen and (min-width: $BP--M) {
+      display: none;
     }
   }
 }

@@ -2,11 +2,8 @@
 // COMPONENTS: Intro Section
 // ------------------------------------------------------------------
 
-.intro {
-  &__logo {
-    @include fluid-property((margin-left, margin-right), -35px, -160px);
-    @media screen and (min-width: $BP--M) {
-      display: none;
-    }
-  }
+.intro__content {
+  @include type-size--XL;
+  @include fluid-property(font-size, 34px, 70px);
+  @extend .font-weight--bold;
 }

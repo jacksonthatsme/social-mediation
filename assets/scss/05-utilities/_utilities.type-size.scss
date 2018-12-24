@@ -3,8 +3,8 @@
 // ------------------------------------------------------------------
 
 @mixin type-size--XL {
-  @include fluid-property(font-size, 34px, 62px);
-  @include fluid-property(line-height, 38px, 78px);
+  @include fluid-property(font-size, 42px, 70px);
+  @include fluid-property(line-height, 44px, 78px);
   letter-spacing: -.03em;
 }
 
@@ -13,9 +13,9 @@
 }
 
 @mixin type-size--L {
-  @include fluid-property(font-size, 28px, 36px);
+  @include fluid-property(font-size, 30px, 32px);
   @include fluid-property(line-height, 34px, 40px);
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
 }
 
 .type-size--L {
@@ -24,7 +24,7 @@
 
 @mixin type-size--M {
   @include fluid-property(font-size, 18px, 22px);
-  @include fluid-property(line-height, 32px, 32px);
+  @include fluid-property(line-height, 28px, 32px);
   letter-spacing: -.01em;
 }
 

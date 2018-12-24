@@ -13,7 +13,7 @@
       display: grid;
       grid-template-columns: 1fr;
       @include type-size--R;
-      @include fluid-property(grid-gap, 40px, 60px);
+      @include fluid-property(grid-gap, 20px, 60px);
       @include fluid-property(padding-top, 20px, 40px);
 
       @media screen and (min-width: $BP--S) {
@@ -44,7 +44,7 @@
 
       @media screen and (min-width: $BP--S) {
         grid-template-columns: repeat(2, 1fr);
-        @include fluid-property(column-gap, 30px, 40px);
+        @include fluid-property(column-gap, 20px, 40px);
       }
     }
 
