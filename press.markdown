@@ -9,11 +9,11 @@ Mentions:
 - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
-  Logo:
+  Logo: 
 - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
-  Logo:
+  Logo: 
 - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
