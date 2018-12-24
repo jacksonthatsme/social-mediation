@@ -2,7 +2,6 @@
 layout: frame
 ---
 
-
 {% include page-title.html title=page.title %}
 {% assign host = site.contributors | where: "is host", true | first %}
 {% include person-block--large.html image=host.image title=host.title content=host.content links=host.links %}
