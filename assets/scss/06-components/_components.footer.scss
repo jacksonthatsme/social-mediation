@@ -57,6 +57,8 @@
       background-color: black;
       cursor: pointer;
       color: white;
+      @include type-size--R;
+      @extend .font-weight--bold;
       @include fluid-property(border-radius, 6px, 8px);
     }
   }
