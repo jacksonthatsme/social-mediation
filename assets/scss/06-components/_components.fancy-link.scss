@@ -1,0 +1,13 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Fancy Link
+// ------------------------------------------------------------------
+
+.fancy-link {
+  & a {
+    background-image: url('../images/underline.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    background-position: bottom;
+    @include fluid-property(padding-bottom, 10px, 20px);
+  }
+}

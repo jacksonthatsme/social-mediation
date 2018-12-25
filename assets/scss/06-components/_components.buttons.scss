@@ -8,6 +8,7 @@
   @include fluid-property((padding-left, padding-right), 15px, 35px);
   @include fluid-property(border-radius, 12px, 14px);
   position: relative;
+  @extend .font-weight--bold;
 
   &:before {
     position: absolute;
