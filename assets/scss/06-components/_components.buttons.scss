@@ -55,18 +55,3 @@
     cursor: not-allowed;
   }
 }
-
-.bttn--subscribe {
-  @include type-size--R;
-  @include fluid-property(line-height, 16px, 18px);
-  @extend .font-weight--bold;
-  display: flex;
-  align-items: center;
-
-  &__icon {
-    @include fluid-property(height, 30px, 36px);
-    @include fluid-property(width, 30px, 36px);
-    @include fluid-property(margin-right, 10px, 15px);
-    flex-shrink: 0;
-  }
-}

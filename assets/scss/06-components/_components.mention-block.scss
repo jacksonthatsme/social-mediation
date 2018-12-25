@@ -4,4 +4,33 @@
 
 .mention-block {
   @extend .bttn;
+  display: grid;
+  grid-template-rows: auto auto 1fr calc-interpolation(40px, 60px);
+
+  padding: 0px;
+
+  &__headline {
+    @include fluid-property((padding-left, padding-right, padding-top), 15px, 20px);
+    @include type-size--L;
+  }
+  &__author {
+    @include fluid-property((padding-left, padding-right, padding-bottom), 15px, 20px);
+    @include type-size--R;
+  }
+
+  &__logo {
+    border-top: 2px solid black;
+    @include fluid-property((padding-left, padding-right, padding-top, padding-bottom), 15px, 20px);
+    grid-row: 4 / 5;
+  }
+
+  &:nth-child(3n+3) {
+    background-color: #FF7145;
+  }
+  &:nth-child(3n+2) {
+    background-color: #FFCE43;
+  }
+  &:nth-child(3n+1) {
+    background-color: #65A2EA;
+  }
 }
