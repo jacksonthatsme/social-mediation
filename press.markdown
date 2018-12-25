@@ -2,21 +2,21 @@
 title: Press
 date: 2018-12-24 19:49:00 Z
 Downloads:
-  - Title: Download our press kit
-    URL: https://youtu.be/EhnLJwmEy_k?t=601
+- Title: Download our press kit
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
 Mentions:
-  - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    Author: Author name
-    URL: https://youtu.be/EhnLJwmEy_k?t=601
-    Logo: "/uploads/NewYorkTimes.svg"
-  - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    Author: Author name
-    URL: https://youtu.be/EhnLJwmEy_k?t=601
-    Logo: "/uploads/Icon--Twitter.svg"
-  - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    Author: Author name
-    URL: https://youtu.be/EhnLJwmEy_k?t=601
-    Logo: "/uploads/Them.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/NewYorkTimes.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/Icon--Twitter.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/Them.svg"
 layout: press
 ---
 
