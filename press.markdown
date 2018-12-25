@@ -16,7 +16,7 @@ Mentions:
 - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
-  Logo: "/uploads/Them.svg"
+  Logo: "/uploads/ThemLogo.svg"
 - Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
