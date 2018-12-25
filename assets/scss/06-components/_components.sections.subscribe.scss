@@ -6,19 +6,3 @@
   @include three-up-grid;
   @include fluid-property(grid-gap, 10px, 20px);
 }
-
-.bttn--subscribe {
-  @include type-size--R;
-  @include fluid-property(line-height, 16px, 18px);
-  @include fluid-property((padding-left, padding-right), 15px, 20px);
-  @extend .font-weight--bold;
-  display: flex;
-  align-items: center;
-
-  &__icon {
-    @include fluid-property(height, 30px, 36px);
-    @include fluid-property(width, 30px, 36px);
-    @include fluid-property(margin-right, 10px, 15px);
-    flex-shrink: 0;
-  }
-}

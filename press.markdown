@@ -17,6 +17,18 @@ Mentions:
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Them.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/Icon--Twitter.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/Icon--Twitter.svg"
+- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  Author: Author name
+  URL: https://youtu.be/EhnLJwmEy_k?t=601
+  Logo: "/uploads/Icon--Twitter.svg"
 layout: press
 ---
 
