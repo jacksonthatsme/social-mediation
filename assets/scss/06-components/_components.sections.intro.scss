@@ -4,6 +4,5 @@
 
 .intro__content {
   @include type-size--XL;
-  @include fluid-property(font-size, 34px, 70px);
   @extend .font-weight--bold;
 }

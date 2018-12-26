@@ -3,9 +3,9 @@
 // ------------------------------------------------------------------
 
 @mixin type-size--XL {
-  @include fluid-property(font-size, 42px, 70px);
+  @include fluid-property(font-size, 34px, 70px);
   @include fluid-property(line-height, 44px, 78px);
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
 }
 
 .type-size--XL {

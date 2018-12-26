@@ -55,6 +55,7 @@
       @extend .bttn;
       margin: 10px;
       background-color: black;
+      @include type-size--R;
       cursor: pointer;
       color: white;
       @include fluid-property(border-radius, 6px, 8px);
