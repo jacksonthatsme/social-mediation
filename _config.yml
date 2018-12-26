@@ -19,11 +19,11 @@ defaults:
     path: ''
     type: contributors
   values:
-    image:
+    image: 
     is host: false
     links:
-    - id:
-      url:
+    - id: 
+      url: 
 - scope:
     path: ''
     type: episodes
@@ -35,13 +35,13 @@ defaults:
     type: posts
   values:
     layout: post
-    contributors:
+    author: 
 email: your-email@example.com
 description: Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
   results) and in your feed.xml site description.
-baseurl:
-url:
+baseurl: 
+url: 
 markdown: kramdown
 kramdown:
   parse_block_html: true
