@@ -8,6 +8,9 @@ collections:
   episodes:
     title: Episodes
     output: true
+  posts:
+    title: posts
+    output: true
   uploads:
     title: Uploads
     output: true
