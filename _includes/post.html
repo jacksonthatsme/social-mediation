@@ -1,0 +1,17 @@
+
+<section class="post">
+  <div class="post__date">
+    {{include.date | date: "%b %-d, %Y" }}
+  </div>
+  <div class="post__title">
+    {{ include.title }}
+  </div>
+  <div class="post__body">
+    <div class="post__content">
+      {{ include.content }}
+    </div>
+    <div class="post__author">
+      {{ include.author }}
+    </div>
+  </div>
+</section>
