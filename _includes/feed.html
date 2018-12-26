@@ -1,5 +1,5 @@
 <section class='feed' data-section='feed'>
-  {% for post in site.posts %}
-    {% include feed-item.html title=post.title publish-date=post.date description=post.content people=post.contributors %}
+  {% for episode in site.episodes %}
+    {% include feed-item.html title=episode.title publish-date=episode.date description=episode.content people=episode.contributors %}
   {% endfor %}
 </section>

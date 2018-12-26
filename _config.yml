@@ -5,8 +5,8 @@ collections:
   contributors:
     title: Contributors
     output: false
-  posts:
-    title: Posts
+  episodes:
+    title: Episodes
     output: true
   uploads:
     title: Uploads
