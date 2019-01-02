@@ -33,8 +33,8 @@
 }
 
 @mixin type-size--R {
-  @include fluid-property(font-size, 14px, 16px);
-  @include fluid-property(line-height, 20px, 28px);
+  @include fluid-property(font-size, 16px, 18px);
+  @include fluid-property(line-height, 24px, 32px);
   letter-spacing: -.02em;
 }
 

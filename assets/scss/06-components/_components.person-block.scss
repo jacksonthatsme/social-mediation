@@ -76,3 +76,18 @@
     }
   }
 }
+
+.person-block--small {
+  .person-block__image {
+    @include fluid-property((height, width), 36px, 48px);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    padding-bottom: 0;
+  }
+  .person-block__name {
+    @include type-size--R;
+    @include fluid-property(line-height, 16px, 18px);
+    @include fluid-property(padding-top, 5px, 10px);
+  }
+}

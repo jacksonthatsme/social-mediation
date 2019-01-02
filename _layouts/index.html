@@ -10,5 +10,9 @@ layout: frame
 <div class='section__label'>
   Latest Episodes
 </div>
-{% include feed.html %}
+<section class='feed' data-section='feed'>
+  {% for episode in site.episodes %}
+    {% include episode.html title=episode.title publish-date=episode.date description=episode.content people=episode.contributors %}
+  {% endfor %}
+</section>
 {% include pagination.html %}

@@ -11,7 +11,8 @@
       {{ include.content }}
     </div>
     <div class="post__author">
-      {{ include.author }}
+      {% assign this-contributor = site.contributors | where: 'title', include.author | first %}
+      {% include person-block--small.html image=this-contributor.image title=this-contributor.title %}
     </div>
   </div>
 </section>

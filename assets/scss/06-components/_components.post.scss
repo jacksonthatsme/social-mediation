@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------
+// COMPONENTS: Post
+// ------------------------------------------------------------------
+
+.post {
+  &__date {
+    @include type-size--L;
+  }
+  &__title {
+    @include type-size--L;
+    @extend .font-weight--bold;
+  }
+  &__body {
+
+  }
+  &__content {
+    @include type-size--R;
+  }
+}

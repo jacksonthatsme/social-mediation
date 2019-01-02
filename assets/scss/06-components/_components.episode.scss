@@ -2,7 +2,7 @@
 // COMPONENTS: Feed Section
 // ------------------------------------------------------------------
 
-.feed {
+.episode {
   &__item {
     &__title {
       @include type-size--L;
@@ -45,19 +45,6 @@
       @media screen and (min-width: $BP--S) {
         grid-template-columns: repeat(2, 1fr);
         @include fluid-property(column-gap, 20px, 40px);
-      }
-    }
-
-    &__person {
-      &__img {
-        @include fluid-property((height, width), 36px, 48px);
-        background-size: cover;
-        background-position: center center;
-        border-radius: 50%;
-      }
-      &__label {
-        @include fluid-property(line-height, 16px, 18px);
-        @include fluid-property(padding-top, 5px, 10px);
       }
     }
   }

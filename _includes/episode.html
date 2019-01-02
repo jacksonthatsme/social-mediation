@@ -1,0 +1,27 @@
+<div class='episode__item'>
+  <div class='episode__item__title'>
+    {{include.title}}
+  </div>
+  <div class='episode__item__body'>
+    <div class='episode__item__description'>
+      <div class='episode__item__subhead'>
+        Published
+        {{include.publish-date | date: "%b %-d, %Y" }}
+      </div>
+      <div class='episode__item__text'>
+        {{include.description}}
+      </div>
+    </div>
+    <div class='episode__item__contributors'>
+      <div class='episode__item__subhead'>
+        Contributors
+      </div>
+      <div class='episode__item__people'>
+        {% for person in include.people %}
+          {% assign this-contributor = site.contributors | where: 'title', person | first %}
+          {% include person-block--small.html image=this-contributor.image title=this-contributor.title %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
