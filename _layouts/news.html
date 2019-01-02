@@ -4,5 +4,7 @@ layout: frame
 
 {% include page-title.html title=page.title %}
 {% for post in site.posts limit:1 %}
-  {% include post.html title=post.title author=post.contributors date=post.date content=post.content %}
+  {% include post.html title=post.title author=post.contributors date=post.date content=post.content image=post.featured-image %}
 {% endfor %}
+
+{% include posts.html%}

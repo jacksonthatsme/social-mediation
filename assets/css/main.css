@@ -1193,6 +1193,9 @@ svg {
       .post__content {
         line-height: 32px; } }
 
+.posts {
+  border-top: 2px solid #C3C8CD; }
+
 .content-container {
   background-color: white;
   position: relative;
