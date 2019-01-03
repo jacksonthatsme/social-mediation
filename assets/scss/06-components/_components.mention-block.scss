@@ -5,7 +5,7 @@
 .mention-block {
   @extend .bttn;
   display: grid;
-  grid-template-rows: auto auto 1fr calc-interpolation(40px, 60px);
+  grid-template-rows: auto auto 1fr auto;
 
   padding: 0px;
 
@@ -21,6 +21,7 @@
   &__logo {
     border-top: 2px solid black;
     @include fluid-property((padding-left, padding-right, padding-top, padding-bottom), 15px, 20px);
+    @include fluid-property(height, 15px, 20px);
     grid-row: 4 / 5;
   }
 

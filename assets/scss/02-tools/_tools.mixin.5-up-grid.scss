@@ -1,0 +1,13 @@
+@mixin five-up-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include fluid-property(grid-gap, 20px, 40px);
+
+  @media screen and (min-width: $BP--S) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: $BP--L) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

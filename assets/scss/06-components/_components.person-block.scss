@@ -15,8 +15,8 @@
 
   &__name {
     @include type-size--L;
-    @extend .font-weight--bold;
     @include fluid-property(padding-top, 10px, 20px);
+    @extend .font-weight--bold;
   }
 
   &__label {
@@ -86,7 +86,7 @@
     padding-bottom: 0;
   }
   .person-block__name {
-    @include type-size--R;
+    @include type-size--S;
     @include fluid-property(line-height, 16px, 18px);
     @include fluid-property(padding-top, 5px, 10px);
   }

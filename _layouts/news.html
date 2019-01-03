@@ -7,4 +7,5 @@ layout: frame
   {% include post.html title=post.title author=post.contributors date=post.date content=post.content image=post.featured-image %}
 {% endfor %}
 
-{% include posts.html%}
+{% assign posts = site.posts %}
+{% include posts.html posts=posts %}

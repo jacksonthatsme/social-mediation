@@ -33,6 +33,7 @@
     }
 
     &__subhead {
+      @include type-size--R;
       @extend .font-weight--bold;
     }
 

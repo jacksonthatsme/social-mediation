@@ -3,21 +3,56 @@
 // ------------------------------------------------------------------
 
 .post {
+  @include fluid-property(padding-top, 40px, 60px);
+
   &__date {
     @include type-size--L;
   }
   &__title {
     @include type-size--L;
     @extend .font-weight--bold;
+    @include fluid-property(padding-bottom, 20px, 30px);
   }
   &__body {
-
+    @include five-up-grid;
+    @include fluid-property(padding-top, 20px, 30px);
   }
   &__content {
     @include type-size--R;
+
+    @media screen and (min-width: $BP--S) {
+      grid-column: 1 / 4;
+    }
+
+    @media screen and (min-width: $BP--L) {
+      grid-column: 1 / 5;
+    }
   }
 }
 
 .posts {
   border-top: 2px solid #C3C8CD;
+  @include fluid-property(margin-top, 60px, 80px);
+}
+
+.post-item {
+  @include five-up-grid;
+  @include fluid-property(padding-top, 30px, 50px);
+
+  &__title {
+    @include type-size--L;
+    @extend .font-weight--bold;
+  }
+  &__date {
+    @include type-size--L;
+  }
+
+  &__content {
+    @media screen and (min-width: $BP--S) {
+      grid-column: 1 / 4;
+    }
+    @media screen and (min-width: $BP--L) {
+      grid-column: 1 / 5;
+    }
+  }
 }
