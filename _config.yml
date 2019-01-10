@@ -47,18 +47,18 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 plugins:
-  - jekyll-feed
-  - jekyll-paginate-v2
+- jekyll-feed
+- jekyll-paginate-v2
 exclude:
-  - Gemfile
-  - Gemfile.lock
+- Gemfile
+- Gemfile.lock
 pagination:
   enabled: true
   per_page: 1
   permalink: '/page/:num/'
   title: ' - page :num'
   limit: 0
-  sort_field: 'date'
+  sort_field: date
   sort_reverse: true
   trail:
     before: 2
