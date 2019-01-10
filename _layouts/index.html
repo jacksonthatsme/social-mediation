@@ -1,5 +1,8 @@
 ---
 layout: frame
+pagination:
+  enabled: true
+  collection: episodes
 ---
 
 {% include intro.html content=page.content %}
@@ -11,8 +14,10 @@ layout: frame
   Latest Episodes
 </div>
 <section class='feed' data-section='feed'>
-  {% for episode in site.episodes %}
+  {% for episode in paginator.posts %}
     {% include episode.html title=episode.title publish-date=episode.date description=episode.content people=episode.contributors %}
   {% endfor %}
 </section>
-{% include pagination.html %}
+{% if paginator.total_pages > 1 %}
+  {% include pagination.html %}
+{% endif %}

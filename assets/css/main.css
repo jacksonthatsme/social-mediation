@@ -80,7 +80,7 @@ svg {
 .font-weight--regular {
   font-weight: 300; }
 
-.font-weight--bold, .bttn, .footer__newsletter__submit, .mention-block, .fixed-menu__nav__list, .episode__item__title, .episode__item__subhead, .intro__content, .bttn--subscribe, .page__title, .person-block__name, .post__title, .post-item__title {
+.font-weight--bold, .bttn, .footer__newsletter__submit, .mention-block, .fixed-menu__nav__list, .episode__item__title, .episode__item__subhead, .intro__content, .bttn--subscribe, .page__title, .person-block__name, .post__title, .post-item__title, .formatted-text strong {
   font-weight: 700; }
 
 .grid-container {
@@ -1723,16 +1723,16 @@ svg {
     .mention-block:nth-child(4n+1) {
       background-color: #65A2EA; } }
 
-.fancy-link a {
+.formatted-text a {
   background-image: url("../images/underline.svg");
   background-repeat: no-repeat;
   background-size: 100% 60%;
   background-position: bottom; }
-  .fancy-link a {
+  .formatted-text a {
     padding-bottom: 10px; }
     @media screen and (min-width: 320px) {
-      .fancy-link a {
+      .formatted-text a {
         padding-bottom: calc(0.92593vw + 7.03704px); } }
     @media screen and (min-width: 1400px) {
-      .fancy-link a {
+      .formatted-text a {
         padding-bottom: 20px; } }

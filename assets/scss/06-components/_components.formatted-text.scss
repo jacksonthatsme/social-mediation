@@ -1,9 +1,14 @@
 // ------------------------------------------------------------------
-// COMPONENTS: Fancy Link
+// COMPONENTS: Formatted Text
 // ------------------------------------------------------------------
 
-.fancy-link {
-  & a {
+.formatted-text {
+
+  strong {
+    @extend .font-weight--bold;
+  }
+
+  a {
     background-image: url('../images/underline.svg');
     background-repeat: no-repeat;
     background-size: 100% 60%;
