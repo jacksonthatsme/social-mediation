@@ -1,20 +1,29 @@
 <section class='pagination' data-section='pagination'>
-  <a class='bttn bttn--disabled pagination__bttn pagination__bttn--last' href=''>
+  {% if paginator.previous_page %}
+  <a class='bttn bttn--disabled pagination__bttn pagination__bttn--last' href='{{ paginator.previous_page_path}}'>
     Back
   </a>
-  <a class='pagination__number pagination__number--active' href=''>
-    1
-  </a>
-  <a class='pagination__number' href=''>
-    2
-  </a>
-  <a class='pagination__number' href=''>
-    3
-  </a>
-  <a class='pagination__number' href=''>
-    4
-  </a>
-  <a class='bttn pagination__bttn--next' href=''>
+  {% else %}
+  <div class='bttn bttn--disabled pagination__bttn pagination__bttn--last'>
+    Back
+  </div>
+  {% endif %}
+
+  {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <a class='pagination__number {% if page.url == trail.path %}pagination__number--active{% endif %}' href="{{ trail.path}}">
+        {{ trail.num }}
+      </a>
+    {% endfor %}
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class='bttn bttn--disabled pagination__bttn pagination__bttn--last' href='{{ paginator.next_page_path }}'>
     Next
   </a>
+  {% else %}
+  <div class='bttn bttn--disabled pagination__bttn pagination__bttn--last'>
+    Next
+  </div>
+  {% endif %}
 </section>

@@ -1,15 +1,17 @@
 <section class="posts">
   {% for post in include.posts limit: 5 offset: 1 %}
-    <div class="post-item">
-      <div class="post-item__content">
-        <div class="post-item__date">{{ post.date | date: "%b %-d, %Y" }}</div>
-        <div class="post-item__title">
-          {{ post.title }}
+    <a href="{{ post.url }}">
+      <div class="post-item">
+        <div class="post-item__content">
+          <div class="post-item__date">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-item__title">
+            {{ post.title }}
+          </div>
         </div>
+        {% if post.featured-image %}
+          <img class="post-item__image" src="{{ post.featured-image }}">
+        {% endif %}
       </div>
-      {% if post.featured-image %}
-        <img class="post-item__image" src="{{ post.featured-image }}">
-      {% endif %}
-    </div>
+    </a>
   {% endfor %}
 </section>
