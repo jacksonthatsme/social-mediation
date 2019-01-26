@@ -9,7 +9,8 @@ Mentions:
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/NewYorkTimes.svg"
-- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- Headline: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum.
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Icon--Twitter.svg"
@@ -17,15 +18,16 @@ Mentions:
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/ThemLogo.svg"
-- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- Headline: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+    dolore eu fugiat nulla pariatur.
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Icon--Twitter.svg"
-- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- Headline: Ut enim ad minim veniam, quis nostrud exercitation ullamco.
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Icon--Twitter.svg"
-- Headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- Headline: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Icon--Twitter.svg"
