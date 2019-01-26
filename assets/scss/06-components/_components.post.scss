@@ -55,4 +55,11 @@
       grid-column: 1 / 5;
     }
   }
+  &__image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
 }

@@ -70,7 +70,7 @@ $(document).ready(function() {
     setFooterHeight();
   });
 
-  var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1});
+  var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1, paused: true});
 
   blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
                    .to(blueHand, .4, {y: -10, ease: Power2.easeOut})

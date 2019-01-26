@@ -1,0 +1,19 @@
+---
+layout: frame
+pagination:
+  enabled: true
+  collection: episodes
+  permalink: "/page/:num/"
+---
+
+<div class='type-size--M'>
+  Page {{ paginator.page }}
+</div>
+
+{% for episode in paginator.posts %}
+  {% include episode-item.html title=episode.title link=episode.url publish-date=episode.date description=episode.content people=episode.contributors %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  {% include pagination.html paginator=paginator %}
+{% endif %}

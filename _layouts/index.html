@@ -3,6 +3,7 @@ layout: frame
 pagination:
   enabled: true
   collection: episodes
+  permalink: "/:num/"
 ---
 
 {% include intro.html content=page.content %}
@@ -15,9 +16,11 @@ pagination:
 </div>
 <section class='feed' data-section='feed'>
   {% for episode in paginator.posts %}
-    {% include episode.html title=episode.title publish-date=episode.date description=episode.content people=episode.contributors %}
+    {% include episode-item.html title=episode.title link=episode.url publish-date=episode.date description=episode.content people=episode.contributors %}
   {% endfor %}
 </section>
+
+
 {% if paginator.total_pages > 1 %}
   {% include pagination.html paginator=paginator %}
 {% endif %}

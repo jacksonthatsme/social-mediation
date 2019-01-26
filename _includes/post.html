@@ -6,7 +6,9 @@
   <div class="post__title">
     {{ include.title }}
   </div>
+  {% if include.image %}
   <img class="post__image" src="{{ include.image }}">
+  {% endif %}
   <div class="post__body">
     <div class="post__content formatted-text">
       {{ include.content }}

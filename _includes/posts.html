@@ -1,5 +1,6 @@
 <section class="posts">
-  {% for post in include.posts limit: 5 offset: 1 %}
+  {% if page.url == "/news/"  %}
+    {% for post in include.posts limit: 5 offset: 1 %}
     <a href="{{ post.url }}">
       <div class="post-item">
         <div class="post-item__content">
@@ -9,9 +10,26 @@
           </div>
         </div>
         {% if post.featured-image %}
-          <img class="post-item__image" src="{{ post.featured-image }}">
+          <div class="post-item__image" style="background-image: url('{{ post.featured-image }}')"></div>
         {% endif %}
       </div>
     </a>
   {% endfor %}
+  {% else %}
+    {% for post in include.posts %}
+    <a href="{{ post.url }}">
+      <div class="post-item">
+        <div class="post-item__content">
+          <div class="post-item__date">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-item__title">
+            {{ post.title }}
+          </div>
+        </div>
+        {% if post.featured-image %}
+          <div class="post-item__image" style="background-image: url('{{ post.featured-image }}')"></div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  {% endif %}
 </section>

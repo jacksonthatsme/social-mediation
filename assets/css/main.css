@@ -759,6 +759,8 @@ svg {
     @media screen and (min-width: 480px) {
       .pagination__number {
         display: block; } }
+  .pagination__bttn {
+    text-align: center; }
 
 .subscribe {
   display: grid;
@@ -1340,6 +1342,12 @@ svg {
   @media screen and (min-width: 1020px) {
     .post-item__content {
       grid-column: 1 / 5; } }
+  .post-item__image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0; }
 
 .content-container {
   background-color: white;
