@@ -18,11 +18,13 @@
     @include type-size--R;
   }
 
-  &__logo {
+  &__attribution {
     border-top: 2px solid black;
     @include fluid-property((padding-left, padding-right, padding-top, padding-bottom), 15px, 20px);
-    @include fluid-property(height, 15px, 20px);
     grid-row: 4 / 5;
+  }
+  &__logo {
+    @include fluid-property(height, 20px, 20px);
   }
 
   &:nth-child(3n+3) {

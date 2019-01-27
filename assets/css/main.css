@@ -1677,34 +1677,34 @@ svg {
       @media screen and (min-width: 1400px) {
         .mention-block__author {
           line-height: 32px; } }
-  .mention-block__logo {
+  .mention-block__attribution {
     border-top: 2px solid black;
     grid-row: 4 / 5; }
-    .mention-block__logo {
+    .mention-block__attribution {
       padding-left: 15px;
       padding-right: 15px;
       padding-top: 15px;
       padding-bottom: 15px; }
       @media screen and (min-width: 320px) {
-        .mention-block__logo {
+        .mention-block__attribution {
           padding-left: calc(0.46296vw + 13.51852px);
           padding-right: calc(0.46296vw + 13.51852px);
           padding-top: calc(0.46296vw + 13.51852px);
           padding-bottom: calc(0.46296vw + 13.51852px); } }
       @media screen and (min-width: 1400px) {
-        .mention-block__logo {
+        .mention-block__attribution {
           padding-left: 20px;
           padding-right: 20px;
           padding-top: 20px;
           padding-bottom: 20px; } }
-    .mention-block__logo {
-      height: 15px; }
-      @media screen and (min-width: 320px) {
-        .mention-block__logo {
-          height: calc(0.46296vw + 13.51852px); } }
-      @media screen and (min-width: 1400px) {
-        .mention-block__logo {
-          height: 20px; } }
+  .mention-block__logo {
+    height: 20px; }
+    @media screen and (min-width: 320px) {
+      .mention-block__logo {
+        height: calc(0vw + 20px); } }
+    @media screen and (min-width: 1400px) {
+      .mention-block__logo {
+        height: 20px; } }
   .mention-block:nth-child(3n+3) {
     background-color: #FF7145; }
   .mention-block:nth-child(3n+2) {
