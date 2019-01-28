@@ -53,7 +53,7 @@ plugins:
 exclude:
 - Gemfile
 - Gemfile.lock
-- [vendor]
+- vendor
 permalink: pretty
 pagination:
   enabled: true
