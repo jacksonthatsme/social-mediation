@@ -3,6 +3,10 @@
 // ------------------------------------------------------------------
 
 .page__title {
-  @include type-size--XL;
+  @include type-size--XXL;
   @extend .font-weight--bold;
+
+  &--long {
+    @include type-size--XL;
+  }
 }

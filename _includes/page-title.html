@@ -1,3 +1,3 @@
-<section class='page__title formatted-text'>
+<section class='page__title {% if include.long == true %}page__title--long{% endif %} formatted-text'>
   {{ include.title | markdownify }}
 </section>

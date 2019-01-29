@@ -13,26 +13,23 @@
     align-items: center;
   }
 
+  &__trail {
+    display: flex;
+    @include fluid-property(grid-gap, 10px, 30px);
+    @include fluid-property((margin-left, margin-right), 10px, 30px);
+    display: none;
+    @media screen and (min-width: $BP--S) {
+      display: block;
+    }
+  }
+
   &__number {
     @include type-size--M;
     @include fluid-property((margin-left, margin-right), 10px, 30px);
     color: #999999;
-    display: none;
-
-    &:first-of-type {
-      @include fluid-property(margin-left, 30px, 60px);
-    }
-
-    &:last-of-type {
-      @include fluid-property(margin-right, 30px, 60px);
-    }
 
     &--active {
       color: black;
-    }
-
-    @media screen and (min-width: $BP--S) {
-      display: block;
     }
   }
 

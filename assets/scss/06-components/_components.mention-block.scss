@@ -11,11 +11,11 @@
 
   &__headline {
     @include fluid-property((padding-left, padding-right, padding-top), 15px, 20px);
-    @include type-size--L;
+    @include type-size--M;
   }
   &__author {
     @include fluid-property((padding-left, padding-right, padding-bottom), 15px, 20px);
-    @include type-size--R;
+    @include type-size--S;
   }
 
   &__attribution {

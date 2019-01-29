@@ -1,30 +1,36 @@
 <section class='pagination' data-section='pagination'>
-  {% if paginator.previous_page %}
-  <a class='bttn pagination__bttn pagination__bttn--last' href='{{ paginator.previous_page_path}}'>
-    Back
-  </a>
+  {% if paginator.previous_page == paginator.first_page %}
+    <a class='bttn pagination__bttn pagination__bttn--last' href='{{site.url}}'>
+      Back
+    </a>
+  {% elsif paginator.previous_page %}
+    <a class='bttn pagination__bttn pagination__bttn--last' href='{{ paginator.previous_page_path}}'>
+      Back
+    </a>
   {% else %}
-  <div class='bttn bttn--disabled pagination__bttn pagination__bttn--last'>
-    Back
-  </div>
+    <div class='bttn bttn--disabled pagination__bttn pagination__bttn--last'>
+      Back
+    </div>
   {% endif %}
 
-  {% if paginator.page_trail %}
-    {% for trail in paginator.page_trail %}
-      {% if trail.path == paginator.first_page_path %}
-        <a class='pagination__number {% if page.url == trail.path %}pagination__number--active{% endif %}' href="{{site.url}}">
-          {{ trail.num }}
-        </a>
-      {% else %}
-        <a class='pagination__number {% if page.url == trail.path %}pagination__number--active{% endif %}' href="{{site.url}}/episodes/page/{{ trail.num }}">
-          {{ trail.num }}
-        </a>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+  <div class="pagination__trail">
+    {% if paginator.page_trail %}
+      {% for trail in paginator.page_trail %}
+        {% if trail.path == paginator.first_page_path %}
+          <a class='pagination__number {% if page.url == trail.path %}pagination__number--active{% endif %}' href="{{site.url}}">
+            {{ trail.num }}
+          </a>
+        {% else %}
+          <a class='pagination__number {% if page.url == trail.path %}pagination__number--active{% endif %}' href="{{site.url}}/episodes/{{ trail.num }}">
+            {{ trail.num }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
 
   {% if paginator.next_page %}
-  <a class='bttn pagination__bttn pagination__bttn--last' href='{{ paginator.next_page_path }}'>
+  <a class='bttn pagination__bttn pagination__bttn--last' href='{{site.url}}/episodes/{{ paginator.next_page }}'>
     Next
   </a>
   {% else %}
