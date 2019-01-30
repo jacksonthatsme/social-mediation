@@ -7,4 +7,4 @@ pagination:
 layout: index
 ---
 
-Social Mediation is a panel show about the culture and politics of identity. Tune in Monday afternoons.
+Social Mediation is a panel show about the culture and politics of identity. Coming soon to your Monday afternoon.
