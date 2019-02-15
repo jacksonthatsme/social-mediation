@@ -9,6 +9,8 @@
   @include fluid-property(border-radius, 12px, 14px);
   position: relative;
   @extend .font-weight--bold;
+  display: inline-block;
+  @include type-size--R;
 
   &:before {
     position: absolute;
@@ -55,4 +57,10 @@
     color: #C3C8CD;
     cursor: not-allowed;
   }
+}
+
+.bttn__wrapper {
+  @include three-up-grid;
+  @include fluid-property(grid-gap, 10px, 20px);
+  @include fluid-property(padding-top, 10px, 20px);
 }

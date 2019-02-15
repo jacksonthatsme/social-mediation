@@ -5,6 +5,7 @@
 .subscribe {
   @include three-up-grid;
   @include fluid-property(grid-gap, 10px, 20px);
+  @include fluid-property(padding-top, 10px, 20px);
 }
 
 .bttn--subscribe {

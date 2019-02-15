@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------
 
 .person-block {
+  @include fluid-property(padding-top, 20px, 40px);
 
   &__image {
     border-radius: 100%;
@@ -78,6 +79,7 @@
 }
 
 .person-block--small {
+  padding-top: 0;
   .person-block__image {
     @include fluid-property((height, width), 36px, 48px);
     background-size: cover;

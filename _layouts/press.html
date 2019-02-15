@@ -6,11 +6,16 @@ layout: frame
 <div class='section__label'>
   Downloads
 </div>
+<div class="bttn__wrapper">
+  <a class="bttn" href="">
+    Download our press kit
+  </a>
+</div>
 
 <div class='section__label'>
   What people are saying about us
 </div>
-<section class="mentions">
+<section class="bttn__wrapper">
   {% for mention in page.Mentions %}
     {% include mention-block.html headline=mention.Headline author=mention.Author logo=mention.Logo url=mention.URL %}
   {% endfor %}

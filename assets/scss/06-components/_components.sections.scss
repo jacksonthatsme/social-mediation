@@ -4,7 +4,6 @@
 
 .section {
   &__label {
-    @include fluid-property(padding-bottom, 20px, 30px);
     @include fluid-property(padding-top, 40px, 60px);
     @include type-size--L;
   }

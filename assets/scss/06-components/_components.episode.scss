@@ -4,6 +4,8 @@
 
 .episode {
   &__item {
+    @include fluid-property(padding-top, 20px, 40px);
+
     &__title {
       @include type-size--L;
       @extend .font-weight--bold;
