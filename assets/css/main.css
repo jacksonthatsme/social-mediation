@@ -1648,7 +1648,9 @@ svg {
       background-color: black;
       letter-spacing: -.02em;
       cursor: pointer;
-      color: white; }
+      color: white;
+      -webkit-appearance: none;
+      appearance: none; }
       .footer__newsletter__submit {
         font-size: 16px; }
         @media screen and (min-width: 320px) {
@@ -1666,13 +1668,16 @@ svg {
           .footer__newsletter__submit {
             line-height: 32px; } }
       .footer__newsletter__submit {
-        border-radius: 6px; }
+        border-radius: 6px;
+        -webkit-border-radius: 6px; }
         @media screen and (min-width: 320px) {
           .footer__newsletter__submit {
-            border-radius: calc(0.18519vw + 5.40741px); } }
+            border-radius: calc(0.18519vw + 5.40741px);
+            -webkit-border-radius: calc(0.18519vw + 5.40741px); } }
         @media screen and (min-width: 1400px) {
           .footer__newsletter__submit {
-            border-radius: 8px; } }
+            border-radius: 8px;
+            -webkit-border-radius: 8px; } }
   .footer__social {
     grid-column: 1 / 25; }
     .footer__social {

@@ -58,7 +58,9 @@
       @include type-size--R;
       cursor: pointer;
       color: white;
-      @include fluid-property(border-radius, 6px, 8px);
+      @include fluid-property((border-radius, -webkit-border-radius), 6px, 8px);
+      -webkit-appearance: none;
+      appearance: none;
     }
   }
 
