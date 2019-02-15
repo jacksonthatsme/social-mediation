@@ -44,23 +44,35 @@
       @include fluid-property(border-radius, 12px, 14px);
       border: none;
 
+      @media screen and (max-width: $BP--M) {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
       &:focus {
         outline: none;
       }
     }
 
     &__submit {
-      grid-row: 1;
-      grid-column: 2 / 3;
       @extend .bttn;
-      margin: 10px;
       background-color: black;
       @include type-size--R;
       cursor: pointer;
       color: white;
-      @include fluid-property((border-radius, -webkit-border-radius), 6px, 8px);
       -webkit-appearance: none;
       appearance: none;
+      @media screen and (max-width: $BP--M) {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+
+      @media screen and (min-width: $BP--M) {
+        grid-row: 1;
+        grid-column: 2 / 3;
+        @include fluid-property((border-radius, -webkit-border-radius), 6px, 8px);
+        margin: 10px;
+      }
     }
   }
 
