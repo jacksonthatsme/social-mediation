@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------
 
 .pagination {
-  @include fluid-property(padding-top, 60px, 100px);
+  @include fluid-property(padding-top, 20px, 40px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @include fluid-property(grid-gap, 10px, 20px);

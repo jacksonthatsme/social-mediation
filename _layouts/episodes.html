@@ -6,12 +6,11 @@ pagination:
   permalink: "/:num/"
 ---
 
-{% assign episode_number_bottom = paginator.page | times: 1 %}
-{% assign episode_number_top = paginator.page | times: 1 | plus: 1 %}
+{% assign episode_number_bottom = paginator.page | minus: 1 | times: paginator.per_page %}
+{% assign episode_number_top = paginator.page | minus: 1 | times: paginator.per_page | plus: paginator.per_page %}
 <section class='page__title {% if include.long == true %}page__title--long{% endif %} formatted-text'>
-  Episodes {{ episode_number_bottom }} &#8212; {{ episode_number_top }}
+  Episodes {{ episode_number_bottom }}&#8212;{{ episode_number_top }}
 </section>
-
 
 {% for episode in paginator.posts %}
   {% include episode-item.html title=episode.title link=episode.url publish-date=episode.date description=episode.content people=episode.contributors %}

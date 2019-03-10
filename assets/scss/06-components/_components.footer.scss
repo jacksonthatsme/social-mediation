@@ -62,9 +62,12 @@
       color: white;
       -webkit-appearance: none;
       appearance: none;
+      -moz-appearance: none;
+
       @media screen and (max-width: $BP--M) {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
+        margin-top: 0px;
       }
 
       @media screen and (min-width: $BP--M) {

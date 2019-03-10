@@ -20,11 +20,11 @@ defaults:
     path: ''
     type: contributors
   values:
-    image: 
+    image:
     is host: false
     links:
-    - id: 
-      url: 
+    - id:
+      url:
 - scope:
     path: ''
     type: episodes
@@ -36,14 +36,14 @@ defaults:
     type: posts
   values:
     layout: post
-    contributors: 
-    featured-image: 
+    contributors:
+    featured-image:
 email: hello@socialmediation.show
 description: Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
   results) and in your feed.xml site description.
-baseurl: 
-url: 
+baseurl:
+url: http://socialmediation.show
 markdown: kramdown
 kramdown:
   parse_block_html: true
@@ -57,7 +57,7 @@ exclude:
 permalink: pretty
 pagination:
   enabled: true
-  per_page: 1
+  per_page: 2
   limit: 0
   sort_field: date
   sort_reverse: true

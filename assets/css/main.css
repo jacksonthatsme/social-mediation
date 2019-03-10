@@ -621,6 +621,15 @@ svg {
     .episode__item {
       padding-top: 40px; } }
 
+.episode__item {
+  padding-bottom: 40px; }
+  @media screen and (min-width: 320px) {
+    .episode__item {
+      padding-bottom: calc(3.7037vw + 28.14815px); } }
+  @media screen and (min-width: 1400px) {
+    .episode__item {
+      padding-bottom: 80px; } }
+
 .episode__item__title {
   letter-spacing: -.01em; }
   .episode__item__title {
@@ -768,13 +777,13 @@ svg {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .pagination {
-    padding-top: 60px; }
+    padding-top: 20px; }
     @media screen and (min-width: 320px) {
       .pagination {
-        padding-top: calc(3.7037vw + 48.14815px); } }
+        padding-top: calc(1.85185vw + 14.07407px); } }
     @media screen and (min-width: 1400px) {
       .pagination {
-        padding-top: 100px; } }
+        padding-top: 40px; } }
   .pagination {
     grid-gap: 10px; }
     @media screen and (min-width: 320px) {
@@ -1651,7 +1660,8 @@ svg {
       cursor: pointer;
       color: white;
       -webkit-appearance: none;
-      appearance: none; }
+      appearance: none;
+      -moz-appearance: none; }
       .footer__newsletter__submit {
         font-size: 16px; }
         @media screen and (min-width: 320px) {
@@ -1671,7 +1681,8 @@ svg {
       @media screen and (max-width: 760px) {
         .footer__newsletter__submit {
           border-top-left-radius: 0px;
-          border-top-right-radius: 0px; } }
+          border-top-right-radius: 0px;
+          margin-top: 0px; } }
       @media screen and (min-width: 760px) {
         .footer__newsletter__submit {
           grid-row: 1;

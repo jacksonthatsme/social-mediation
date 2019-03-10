@@ -5,6 +5,7 @@
 .episode {
   &__item {
     @include fluid-property(padding-top, 20px, 40px);
+    @include fluid-property(padding-bottom, 40px, 80px);
 
     &__title {
       @include type-size--L;
