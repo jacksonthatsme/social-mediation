@@ -1,5 +1,5 @@
 ---
-title: We’re joining multitude!
+title: Raw denim deep v health goth cillum
 date: 2018-12-26 03:14:00 Z
 contributors: Jackson Lynch
 featured-image: "/uploads/adcdbc0f9f282219194a9645d8dbc591--graphic-illustration-visual-design.jpg"
