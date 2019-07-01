@@ -7,4 +7,4 @@ pagination:
 layout: index
 ---
 
-Social mediation is an optimistic look at the culture, politics and future of identity. Coming soon to your Monday afternoon.
+Social Mediation is a show about the things we identify with, and how they interact with the world. Coming soon to your Monday afternoon.
