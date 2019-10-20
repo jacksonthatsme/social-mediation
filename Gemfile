@@ -19,5 +19,5 @@ gem 'haml'
 # If you have any plugins, put them here!
 gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
-  gem "jekyll-paginate-v2", "~> 2.0.0"
+  gem "jekyll-paginate-v2", github: "sverrirs/jekyll-paginate-v2", tag: "v2.0.0"
 end
