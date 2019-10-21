@@ -1,7 +1,7 @@
 ---
 title: This is the title of the eighth episode
 date: 2019-10-21 18:41:00 Z
-position: 6
+position: 7
 contributors:
 - Autumn Newcomb
 - Jackson Lynch
