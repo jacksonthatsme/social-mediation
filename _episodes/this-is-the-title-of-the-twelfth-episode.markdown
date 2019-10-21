@@ -1,10 +1,8 @@
 ---
-title: This is the title of the first episode
-date: 2018-12-11 04:18:00 Z
-position: 0
+title: This is the title of the twelfth episode
+date: 2019-10-21 18:44:00 Z
+position: 11
 contributors:
-- Jackson Lynch
-- Autumn Newcomb
 - Jackie Handy
 - Ronin Wood
 ---
