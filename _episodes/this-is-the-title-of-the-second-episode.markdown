@@ -1,6 +1,7 @@
 ---
 title: This is the title of the second episode
 date: 2019-01-10 05:34:00 Z
+position: 2
 contributors:
 - Jackie Handy
 - Autumn Newcomb
