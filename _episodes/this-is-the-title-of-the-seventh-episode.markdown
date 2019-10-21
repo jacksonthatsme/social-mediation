@@ -1,7 +1,7 @@
 ---
 title: This is the title of the seventh episode
 date: 2019-10-21 18:41:00 Z
-position: 3
+position: 5
 contributors:
 - Ronin Wood
 - Jackie Handy
