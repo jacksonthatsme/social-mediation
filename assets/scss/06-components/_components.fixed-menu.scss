@@ -18,6 +18,7 @@
 
   &__logo {
     display: none;
+    pointer-events: auto;
     @media screen and (min-width: $BP--M) {
       display: block;
       grid-column: 1 / 7;

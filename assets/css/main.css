@@ -376,7 +376,8 @@ svg {
   .fixed-menu__grid {
     grid-template-rows: auto 1fr auto; }
   .fixed-menu__logo {
-    display: none; }
+    display: none;
+    pointer-events: auto; }
     @media screen and (min-width: 760px) {
       .fixed-menu__logo {
         display: block;
