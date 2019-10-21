@@ -1,7 +1,7 @@
 ---
 title: This is the title of the first episode
 date: 2018-12-11 04:18:00 Z
-position: 1
+position: 0
 contributors:
 - Jackson Lynch
 - Autumn Newcomb

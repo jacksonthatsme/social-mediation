@@ -1,7 +1,7 @@
 ---
 title: This is the title of the ninth episode
 date: 2019-10-21 18:42:00 Z
-position: 9
+position: 8
 contributors:
 - Ronin Wood
 - Jackie Handy
