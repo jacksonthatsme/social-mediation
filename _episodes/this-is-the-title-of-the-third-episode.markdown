@@ -1,7 +1,7 @@
 ---
 title: This is the title of the third episode
 date: 2019-01-10 05:57:00 Z
-position: 1
+position: 7
 contributors:
 - Ronin Wood
 - Jackie Handy
