@@ -1,7 +1,7 @@
 ---
 title: This is the title of the fourth episode
 date: 2019-01-10 05:58:00 Z
-position: 3
+position: 4
 contributors:
 - Ronin Wood
 - Jackie Handy

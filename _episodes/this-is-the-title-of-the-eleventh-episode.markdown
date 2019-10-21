@@ -1,6 +1,7 @@
 ---
 title: This is the title of the eleventh episode
 date: 2019-10-21 18:43:00 Z
+position: 0
 contributors:
 - Ronin Wood
 - Autumn Newcomb
