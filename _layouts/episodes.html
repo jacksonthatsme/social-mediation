@@ -4,13 +4,14 @@ pagination:
   enabled: true
   collection: episodes
   permalink: "/:num/"
-  sort_reverse: true
 ---
 
-{% assign episode_number_bottom = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign episode_number_top = paginator.page | minus: 1 | times: paginator.per_page | plus: paginator.per_page %}
+{% assign posts_offset = paginator.page | times: paginator.per_page %}
+{% assign episode_number_top = paginator.total_posts  | minus: posts_offset %}
+{% assign episode_number_bottom = episode_number_top | minus: paginator.per_page %}
+
 <section class='page__title {% if include.long == true %}page__title--long{% endif %} formatted-text'>
-  Episodes {{ episode_number_bottom }}&#8212;{{ episode_number_top }}
+  Episodes {{ episode_number_top }}&#8212;{{ episode_number_bottom }}
 </section>
 
 {% for episode in paginator.posts %}
