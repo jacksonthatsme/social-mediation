@@ -4,6 +4,7 @@ pagination:
   enabled: true
   collection: episodes
   permalink: "/:num/"
+  sort_reverse: true
 ---
 
 {% assign episode_number_bottom = paginator.page | minus: 1 | times: paginator.per_page %}
