@@ -97,8 +97,70 @@
       @media screen and (min-width: $BP--M) {
         @include fluid-property(padding-bottom, 5px, 15px, $min-screen: $BP--M);
       }
+
+      & a {
+        position: relative;
+
+        & .circled-line {
+          position: absolute;
+          @include fluid-property(top, -10px, -15px);
+          @include fluid-property(bottom, -10px, -15px);
+          @include fluid-property(right, -10px, -15px);
+          @include fluid-property(left, -10px, -15px);
+          stroke: $color--yellow;
+          transform: rotate(-5deg);
+        }
+
+        &:hover {
+          & .circled-line {
+            svg {
+              stroke-dashoffset: 0;
+              transition: .5s;
+            }
+          }
+        }
+      }
+      &:nth-of-type(1) {
+        & .circled-line {
+          stroke: $color--yellow;
+          transform: rotate(-5deg);
+        }
+      }
+      &:nth-of-type(2) {
+        & .circled-line {
+          stroke: $color--red;
+          transform: rotate(8deg);
+        }
+      }
+      &:nth-of-type(3) {
+        & .circled-line {
+          stroke: $color--green;
+          transform: rotate(-4deg);
+        }
+      }
+      &:nth-of-type(4) {
+        & .circled-line {
+          stroke: $color--blue;
+          transform: rotate(6deg);
+        }
+      }
+      &:nth-of-type(5) {
+        & .circled-line {
+          stroke: $color--purple;
+          transform: rotate(-2deg);
+        }
+      }
     }
   }
+
+@keyframes circleLink {
+ from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
   &__footer {
     position: relative;

@@ -30,7 +30,8 @@ $(document).ready(function() {
       yellowHand = $('[data-js="yellow__hand"]'),
       logotype = $('[data-js="logotype"]'),
       contentContainer = $('[data-js="content-container"]'),
-      footer = $('[data-js="footer"]');
+      footer = $('[data-js="footer"]'),
+      circledLine = $('[data-js="circledLine"]');
 
   var menuAnimation = new TimelineMax();
 
@@ -75,4 +76,11 @@ $(document).ready(function() {
   blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
                    .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
                    .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
+  circledLine.each(function() {
+    var path = $(this).find("svg path").get(0);
+    var pathLength = path.getTotalLength();
+
+    this.style.strokeDasharray = pathLength;
+    this.style.strokeDashoffset = pathLength;
+  });
 });
