@@ -28,6 +28,12 @@
       @include fluid-property(padding-top, 10px, 20px);
     }
 
+    &__link {
+      @extend .font-weight--bold;
+      color: $color--red;
+      display: inline;
+    }
+
     &__description {
       grid-column: 1 / -1;
       @media screen and (min-width: $BP--S) {

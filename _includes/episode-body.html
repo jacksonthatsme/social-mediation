@@ -1,11 +1,19 @@
 <div class='episode__item__body'>
+  <div class="episode__item__media">
+    Media
+  </div>
   <div class='episode__item__description'>
     <div class='episode__item__subhead'>
       Published
       {{ include.publish-date | date: "%b %-d, %Y" }}
     </div>
     <div class='episode__item__text formatted-text'>
-      {{ include.content }}
+      {% if include.truncated == true %}
+        {{ include.content | truncatewords: 50 }}
+        <a href="{{include.link}}" class="episode__item__link">Read more</a>
+      {% else %}
+        {{ include.content }}
+      {% endif %}
     </div>
   </div>
   <div class='episode__item__contributors'>
