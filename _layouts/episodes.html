@@ -15,7 +15,7 @@ pagination:
 </section>
 
 {% for episode in paginator.posts %}
-  {% include episode-item.html title=episode.title link=episode.url publish-date=episode.date description=episode.content people=episode.contributors %}
+  {% include episode-item.html title=episode.title link=episode.url publish-date=episode.date description=episode.content people=episode.contributors media=episode.media %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}

@@ -1,6 +1,8 @@
 <div class='episode__item__body'>
   <div class="episode__item__media">
-    Media
+    {% if include.media %}
+      {{ include.media }}
+    {% endif %}
   </div>
   <div class='episode__item__description'>
     <div class='episode__item__subhead'>
@@ -18,7 +20,7 @@
   </div>
   <div class='episode__item__contributors'>
     <div class='episode__item__subhead'>
-      Contributors
+      Panelists
     </div>
     <div class='episode__item__people'>
       {% for person in include.people %}

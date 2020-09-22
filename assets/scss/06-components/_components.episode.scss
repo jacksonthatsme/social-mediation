@@ -12,11 +12,16 @@
       @extend .font-weight--bold;
     }
 
+    &__media {
+      grid-column: 1 / -1;
+    }
+
     &__body {
       display: grid;
       grid-template-columns: 1fr;
       @include type-size--R;
-      @include fluid-property(grid-gap, 20px, 60px);
+      @include fluid-property(grid-column-gap, 20px, 60px);
+      @include fluid-property(grid-row-gap, 10px, 20px);
       @include fluid-property(padding-top, 20px, 40px);
 
       @media screen and (min-width: $BP--S) {

@@ -712,6 +712,9 @@ svg {
       .episode__item__title {
         line-height: 40px; } }
 
+.episode__item__media {
+  grid-column: 1 / -1; }
+
 .episode__item__body {
   display: grid;
   grid-template-columns: 1fr;
@@ -733,13 +736,21 @@ svg {
       .episode__item__body {
         line-height: 32px; } }
   .episode__item__body {
-    grid-gap: 20px; }
+    grid-column-gap: 20px; }
     @media screen and (min-width: 320px) {
       .episode__item__body {
-        grid-gap: calc(3.7037vw + 8.14815px); } }
+        grid-column-gap: calc(3.7037vw + 8.14815px); } }
     @media screen and (min-width: 1400px) {
       .episode__item__body {
-        grid-gap: 60px; } }
+        grid-column-gap: 60px; } }
+  .episode__item__body {
+    grid-row-gap: 10px; }
+    @media screen and (min-width: 320px) {
+      .episode__item__body {
+        grid-row-gap: calc(0.92593vw + 7.03704px); } }
+    @media screen and (min-width: 1400px) {
+      .episode__item__body {
+        grid-row-gap: 20px; } }
   .episode__item__body {
     padding-top: 20px; }
     @media screen and (min-width: 320px) {
