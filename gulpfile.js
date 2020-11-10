@@ -1,50 +1,35 @@
 // Define variables
-const gulp = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const haml = require('gulp-ruby-haml');
-const rename = require('gulp-rename');
-const htmlbeautify = require('gulp-html-beautify');
+
 
 // Register Tasks
-gulp.task('sass', function() {
-  return gulp.src('./assets/scss/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css/'));
-});
 
-gulp.task('js:vendor', function() {
-  return gulp.src(['./assets/javascripts/vendor/*.js'])
+function css() {
+  return src('./assets/scss/*.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(dest('./assets/css/'));
+}
+
+function vendors() {
+  return src('./assets/javascripts/vendor/*.js')
   .pipe(concat('vendor.js'))
-  .pipe(gulp.dest('./assets/js/'));
-});
+  .pipe(dest('./assets/js/'));
+}
 
-gulp.task('js:custom', function() {
-  return gulp.src('./assets/javascripts/*.js')
-    .pipe(concat('site.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./assets/js/'));
-});
+function javascripts() {
+  return src('./assets/javascripts/*.js')
+  .pipe(concat('site.js'))
+  // .pipe(uglify())
+  .pipe(dest('./assets/js/'));
+}
 
-gulp.task('haml', function() {
-  return gulp.src('**/_haml/*.haml')
-    .pipe(haml())
-    .pipe(htmlbeautify({indent_size: 2}))
-    .pipe(rename(function (path) {
-       var temp = path.dirname.replace('/_haml','');
-       path.dirname = temp;
-    }))
-    .pipe(gulp.dest('.'));
-});
+build = series(javascripts, css);
 
-gulp.task('js', ['js:vendor', 'js:custom']);
-
-gulp.task('build', ['sass','js']);
-
-gulp.task('default', ['build']);
-
-gulp.task('watch', function(){
-  gulp.watch('./assets/scss/**/*.scss', ['build']);
-  gulp.watch('./assets/javascripts/*.js', ['build']);
-});
+exports.build = build;
+exports.vendors = vendors;
+exports.default = function() {
+  watch(['./assets/scss/**/*.scss', './assets/javascripts/*.js'], build);
+}

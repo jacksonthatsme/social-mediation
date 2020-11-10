@@ -33,7 +33,7 @@ $(document).ready(function() {
       footer = $('[data-js="footer"]'),
       circledLine = $('[data-js="circledLine"]');
 
-  var menuAnimation = new TimelineMax();
+  var menuAnimation = gsap.timeline();
 
   //CustomEase.create("menuBackgroundShrink", "M0,0 C0,0 0.147,-0.006 0.252,0.102 0.406,0.263 0.358,0.642 0.526,0.82 0.73,1.036 0.985,1 1,1");
 
@@ -41,17 +41,17 @@ $(document).ready(function() {
     bodyEl.toggleClass('has-menu');
 
     if (bodyEl.hasClass('has-menu')) {
-      menuAnimation.to(menuBackground, .4, {scaleX: 1.2, scaleY: 1.2})
-                   .to(menuBackground, 1.1, {ease: Expo.easeOut, scaleX: 60, scaleY: 60})
-                   .to(menuIconActivate, .1, {opacity: 0}, "-=1.1")
-                   .to(menuIconClose, .8, {opacity: 1}, "-=1")
-                   .staggerTo(siteMenuElement, 1, {opacity: 1}, 0.1, "-=1");
+      menuAnimation.to(menuBackground, {duration: .4, scaleX: 1.2, scaleY: 1.2})
+                   .to(menuBackground, {duration: 1.1, ease: Expo.easeOut, scaleX: 60, scaleY: 60})
+                   .to(menuIconActivate, { duration: .1, opacity: 0}, "-=1.1")
+                   .to(menuIconClose, {duration: .8, opacity: 1}, "-=1")
+                   .to(siteMenuElement, {opacity: 1, stagger: .08}, "-=1");
     } else {
-      menuAnimation.to(menuBackground, 1.1, {scaleX: 1.2, scaleY: 1.2, ease: Expo.easeIn})
-                   .to(menuBackground, .4, {scaleX: 1.6, scaleY: 1.6})
-                   .staggerTo(siteMenuElementReverse, .2, {opacity: 0}, .1, "-=1.5")
-                   .to(menuIconClose, 0, {opacity: 0}, "-=.4")
-                   .to(menuIconActivate, .8, {opacity: 1}, "-=.2");
+      menuAnimation.to(menuBackground, {duration: 1.1, scaleX: 1.2, scaleY: 1.2, ease: Expo.easeIn})
+                   .to(menuBackground, {duration: .4, scaleX: 1.6, scaleY: 1.6})
+                   .to(siteMenuElementReverse, {opacity: 0, stagger: .06}, "-=1.5")
+                   .to(menuIconClose, {duration: 0, opacity: 0}, "-=.4")
+                   .to(menuIconActivate, {duration: .8, opacity: 1}, "-=.2");
 
     }
   }
@@ -71,11 +71,11 @@ $(document).ready(function() {
     setFooterHeight();
   });
 
-  var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1, paused: true});
+  // var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1, paused: true});
 
-  blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
-                   .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
-                   .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
+  // blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
+  //                  .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
+  //                  .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
   circledLine.each(function() {
     var path = $(this).find("svg path").get(0);
     var pathLength = path.getTotalLength();

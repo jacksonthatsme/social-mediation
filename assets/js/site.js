@@ -1,1 +1,86 @@
-$(document).ready(function(){var a=$('[data-js="menu__toggle"]'),e=$('[data-js="menu__background"]'),t=($('[data-js="navigation__list"]'),$('[data-js="navigation__list__item"]'),$('[data-js="social__button-container"]'),$('[data-js="footer__copyright"]'),$('[data-js*="site__menu__element"]')),s=$('[data-js*="menu__activate"]'),o=$('[data-js*="menu__close"]'),l=$("body"),n=t.toArray().reverse(),_=($('[data-js="blob--orange"]'),$('[data-js="blob--blue"]'),$('[data-js="blob--yellow"]'),$('[data-js="blob--green"]'),$('[data-js="check"]'),$('[data-js="cross"]'),$('[data-js="blue__brow--L"]'),$('[data-js="blue__eye--L"]'),$('[data-js="blue__eye--R"]'),$('[data-js="blue__brow--R"]')),d=($('[data-js="blue__mouth"]'),$('[data-js="blue__hand"]')),i=($('[data-js="yellow__brow--L"]'),$('[data-js="yellow__brow--R"]'),$('[data-js="yellow__mouth"]'),$('[data-js="yellow__eye--L"]'),$('[data-js="yellow__eye--R"]'),$('[data-js="yellow__hand"]'),$('[data-js="logotype"]'),$('[data-js="content-container"]')),c=$('[data-js="footer"]'),r=$('[data-js="circledLine"]'),j=new TimelineMax;function y(){var a=c.innerHeight();i.css("marginBottom",a)}a.bind("click",function(){l.toggleClass("has-menu"),l.hasClass("has-menu")?j.to(e,.4,{scaleX:1.2,scaleY:1.2}).to(e,1.1,{ease:Expo.easeOut,scaleX:60,scaleY:60}).to(s,.1,{opacity:0},"-=1.1").to(o,.8,{opacity:1},"-=1").staggerTo(t,1,{opacity:1},.1,"-=1"):j.to(e,1.1,{scaleX:1.2,scaleY:1.2,ease:Expo.easeIn}).to(e,.4,{scaleX:1.6,scaleY:1.6}).staggerTo(n,.2,{opacity:0},.1,"-=1.5").to(o,0,{opacity:0},"-=.4").to(s,.8,{opacity:1},"-=.2")}),y(),$(window).resize(function(){y()}),new TimelineMax({yoyo:!0,repeat:-1,paused:!0}).to(d,.4,{x:5,ease:Power2.easeIn}).to(d,.4,{y:-10,ease:Power2.easeOut}).to(_,.4,{rotation:5,y:-10,ease:Power2.easeOut}),r.each(function(){var a=$(this).find("svg path").get(0).getTotalLength();this.style.strokeDasharray=a,this.style.strokeDashoffset=a})});
+$(document).ready(function() {
+  var menuToggle = $('[data-js="menu__toggle"]'),
+      menuBackground = $('[data-js="menu__background"]'),
+      navigationList = $('[data-js="navigation__list"]'),
+      navigationListItem = $('[data-js="navigation__list__item"]'),
+      socialButtonContainer = $('[data-js="social__button-container"]'),
+      footerCopyright = $('[data-js="footer__copyright"]'),
+      siteMenuElement = $('[data-js*="site__menu__element"]'),
+      menuIconActivate = $('[data-js*="menu__activate"]'),
+      menuIconClose = $('[data-js*="menu__close"]'),
+      bodyEl = $('body'),
+      siteMenuElementReverse = siteMenuElement.toArray().reverse(),
+      blobOrange = $('[data-js="blob--orange"]'),
+      blobBlue = $('[data-js="blob--blue"]'),
+      blobYellow = $('[data-js="blob--yellow"]'),
+      blobGreen = $('[data-js="blob--green"]'),
+      check = $('[data-js="check"]'),
+      cross = $('[data-js="cross"]'),
+      blueBrowL = $('[data-js="blue__brow--L"]'),
+      blueEyeL = $('[data-js="blue__eye--L"]'),
+      blueEyeR = $('[data-js="blue__eye--R"]'),
+      blueBrowR = $('[data-js="blue__brow--R"]'),
+      blueMouth = $('[data-js="blue__mouth"]'),
+      blueHand = $('[data-js="blue__hand"]'),
+      yellowBrowL = $('[data-js="yellow__brow--L"]'),
+      yellowBrowR = $('[data-js="yellow__brow--R"]'),
+      yellowMouth = $('[data-js="yellow__mouth"]'),
+      yellowEyeL = $('[data-js="yellow__eye--L"]'),
+      yellowEyeR = $('[data-js="yellow__eye--R"]'),
+      yellowHand = $('[data-js="yellow__hand"]'),
+      logotype = $('[data-js="logotype"]'),
+      contentContainer = $('[data-js="content-container"]'),
+      footer = $('[data-js="footer"]'),
+      circledLine = $('[data-js="circledLine"]');
+
+  var menuAnimation = gsap.timeline();
+
+  //CustomEase.create("menuBackgroundShrink", "M0,0 C0,0 0.147,-0.006 0.252,0.102 0.406,0.263 0.358,0.642 0.526,0.82 0.73,1.036 0.985,1 1,1");
+
+  function toggleMenu() {
+    bodyEl.toggleClass('has-menu');
+
+    if (bodyEl.hasClass('has-menu')) {
+      menuAnimation.to(menuBackground, {duration: .4, scaleX: 1.2, scaleY: 1.2})
+                   .to(menuBackground, {duration: 1.1, ease: Expo.easeOut, scaleX: 60, scaleY: 60})
+                   .to(menuIconActivate, { duration: .1, opacity: 0}, "-=1.1")
+                   .to(menuIconClose, {duration: .8, opacity: 1}, "-=1")
+                   .to(siteMenuElement, {opacity: 1, stagger: .08}, "-=1");
+    } else {
+      menuAnimation.to(menuBackground, {duration: 1.1, scaleX: 1.2, scaleY: 1.2, ease: Expo.easeIn})
+                   .to(menuBackground, {duration: .4, scaleX: 1.6, scaleY: 1.6})
+                   .to(siteMenuElementReverse, {opacity: 0, stagger: .06}, "-=1.5")
+                   .to(menuIconClose, {duration: 0, opacity: 0}, "-=.4")
+                   .to(menuIconActivate, {duration: .8, opacity: 1}, "-=.2");
+
+    }
+  }
+
+  menuToggle.bind('click', function() {
+    toggleMenu();
+  });
+
+  function setFooterHeight() {
+    var footerHeight = footer.innerHeight();
+    contentContainer.css('marginBottom', footerHeight);
+  }
+
+  setFooterHeight();
+
+  $(window).resize(function(){
+    setFooterHeight();
+  });
+
+  // var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1, paused: true});
+
+  // blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
+  //                  .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
+  //                  .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
+  circledLine.each(function() {
+    var path = $(this).find("svg path").get(0);
+    var pathLength = path.getTotalLength();
+
+    this.style.strokeDasharray = pathLength;
+    this.style.strokeDashoffset = pathLength;
+  });
+});
