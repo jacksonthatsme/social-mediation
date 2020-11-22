@@ -22,7 +22,7 @@ function vendors() {
 function javascripts() {
   return src('./assets/javascripts/*.js')
   .pipe(concat('site.js'))
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(dest('./assets/js/'));
 }
 

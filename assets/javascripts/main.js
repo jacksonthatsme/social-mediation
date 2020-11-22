@@ -71,11 +71,14 @@ $(document).ready(function() {
     setFooterHeight();
   });
 
-  // var blueBlobAnimation = new TimelineMax({yoyo: true, repeat: -1, paused: true});
+  var blueBlobAnimation = gsap.timeline({yoyo: true, repeat: -1, paused: true});
 
-  // blueBlobAnimation.to(blueHand, .4, {x: 5, ease: Power2.easeIn})
-  //                  .to(blueHand, .4, {y: -10, ease: Power2.easeOut})
-  //                  .to(blueBrowR, .4, {rotation: 5, y: -10, ease: Power2.easeOut});
+  blueBlobAnimation.to(blueHand, {duration: .4, x: 5, ease: Power2.easeIn})
+                   .to(blueHand, {duration: .4, y: -10, ease: Power2.easeOut})
+                   .to(blueBrowR, {duration: .4, rotation: 5, y: -10, ease: Power3.easeIn}, '<');
+
+  blueBlobAnimation.play();
+
   circledLine.each(function() {
     var path = $(this).find("svg path").get(0);
     var pathLength = path.getTotalLength();
