@@ -10,7 +10,7 @@ Mentions:
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/NewYorkTimes.svg"
 - Headline: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum.
+    deserunt mollit anim id est Cool.
   Author: Author name
   URL: https://youtu.be/EhnLJwmEy_k?t=601
   Logo: "/uploads/Icon--Twitter.svg"
